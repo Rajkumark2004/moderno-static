@@ -1156,31 +1156,62 @@ function escapeHtml(str) {
 
 async function initFaqs() {
     const container = document.getElementById('faqsAccordionContainer');
+    const mainSection = document.getElementById('faqsMainSection');
     if (!container) return;
 
-    const list = (typeof window.FAQS !== 'undefined' && window.FAQS.length > 0) ? window.FAQS :
-                 (typeof FAQS !== 'undefined' && FAQS.length > 0) ? FAQS : [
-                    { q: 'How can I visit an Experience Center to see products?', a: 'Visit our flagship experience centers in Hyderabad & Bangalore for custom finish and fabric consultations.' },
-                    { q: 'What warranty coverage is included?', a: 'All MODERNO solid wood furniture includes a 10-Year Warranty covering structural timber integrity.' },
-                    { q: 'Do you offer free delivery & assembly?', a: 'Yes! Free express delivery and certified in-home installation are included on all orders.' }
-                 ];
+    try {
+        const res = await fetch('api/faqs.php');
+        if (!res.ok) throw new Error('API request failed');
+        const json = await res.json();
 
-    container.innerHTML = list.map((faq, index) => `
-        <div class="faq-item ${index === 0 ? 'active' : ''}">
-            <button type="button" class="faq-question" onclick="toggleFaq(this)" aria-expanded="${index === 0 ? 'true' : 'false'}">
-                <span class="faq-question-text">${escapeHtml(faq.question || faq.q || '')}</span>
-                <span class="faq-icon-pill">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </span>
-            </button>
-            <div class="faq-answer">
-                <div class="faq-answer-inner">
-                    <p>${escapeHtml(faq.answer || faq.a || '').replace(/
-/g, '<br>')}</p>
+        if (json.status === 'success' && Array.isArray(json.data) && json.data.length > 0) {
+            container.innerHTML = json.data.map((faq, index) => `
+                <div class="faq-item ${index === 0 ? 'active' : ''}">
+                    <button type="button" class="faq-question" onclick="toggleFaq(this)" aria-expanded="${index === 0 ? 'true' : 'false'}">
+                        <span class="faq-question-text">${escapeHtml(faq.question)}</span>
+                        <span class="faq-icon-pill">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>${escapeHtml(faq.answer).replace(/\n/g, '<br>')}</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    `).join('');
+            `).join('');
+            if (mainSection) mainSection.style.display = 'block';
+        } else {
+            if (mainSection) {
+                mainSection.style.display = 'none';
+            } else {
+                container.innerHTML = '<div style="text-align:center; color:#94a3b8; padding:2rem;">No active FAQs found.</div>';
+            }
+        }
+    } catch (err) {
+        console.warn('Failed to load dynamic FAQs:', err);
+        if (typeof FAQS !== 'undefined' && FAQS.length > 0) {
+            container.innerHTML = FAQS.map((faq, index) => `
+                <div class="faq-item ${index === 0 ? 'active' : ''}">
+                    <button type="button" class="faq-question" onclick="toggleFaq(this)" aria-expanded="${index === 0 ? 'true' : 'false'}">
+                        <span class="faq-question-text">${escapeHtml(faq.q)}</span>
+                        <span class="faq-icon-pill">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>${escapeHtml(faq.a)}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
 }
 
 function toggleFaq(btn) {

@@ -2993,12 +2993,19 @@ function placeOrder() {
         btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Initializing Demo Gateway Terminal...';
     }
 
-    Promise.resolve({
-                status: 'success',
-                order_id: 'DEMO_ORD_' + Date.now(),
-                amount: typeof finalTotal !== 'undefined' ? finalTotal : 1000,
-                currency: 'INR'
-            }).then(orderData => {
+    fetch('api/create_razorpay_order.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            amount: finalTotal,
+            customer_name: fullName,
+            customer_phone: phone,
+            customer_email: email,
+            payment_method: 'demo_gateway'
+        })
+    })
+    .then(res => res.json())
+    .then(orderData => {
         if (btn) {
             btn.disabled = false;
             btn.innerHTML = '<i class="fa-solid fa-lock"></i> <span id="coPlaceOrderBtnText">Proceed to Demo Payment Gateway (&#x20B9;' + finalTotal.toLocaleString('en-IN') + ')</span>';
@@ -3101,52 +3108,47 @@ function executeFinalCheckoutSubmission(finalPayload) {
         btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Finalizing Order...';
     }
 
-    setTimeout(() => {
-                const demoId = Math.floor(1000 + Math.random() * 9000);
-                const demoEnquiryNumber = 'ENQ-' + new Date().getFullYear() + String(demoId);
-                const demoData = {
-                    status: 'success',
-                    message: 'Your enquiry & quotation request has been processed successfully!',
-                    enquiry_number: demoEnquiryNumber,
-                    enquiry_id: demoId,
-                    customer_name: (finalPayload.customer_name || (finalPayload.first_name || '') + ' ' + (finalPayload.last_name || '')).trim() || 'Valued Customer',
-                    customer_email: finalPayload.customer_email || finalPayload.email || 'customer@example.com',
-                    customer_phone: finalPayload.customer_phone || finalPayload.phone || '9876543210',
-                    delivery_address: finalPayload.delivery_address || ((finalPayload.flat_no || '') + ', ' + (finalPayload.street || '') + ', ' + (finalPayload.city || '')).trim() || 'Hyderabad, Telangana',
-                    payment_method: finalPayload.payment_method || 'Product Enquiry (Quotation Request)',
-                    total_amount: finalPayload.total_amount || finalPayload.amount || 0,
-                    created_at: new Date().toISOString().replace('T', ' ').substring(0, 19),
-                    items: finalPayload.items || []
-                };
+    fetch('api/submit_enquiry.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(finalPayload)
+    })
+    .then(r => r.json())
+    .then(data => {
+        if (data.status === 'success') {
+            document.getElementById('coOrderId').textContent = 'Order Reference #: ' + data.enquiry_number;
 
-                try {
-                    const existing = JSON.parse(localStorage.getItem('moderno_enquiries') || '[]');
-                    existing.unshift(demoData);
-                    localStorage.setItem('moderno_enquiries', JSON.stringify(existing));
-                } catch(e){}
+            updateProgressBar(5);
+            const step5 = document.getElementById('step-btn-5');
+            const num5 = document.getElementById('step-num-5');
+            if (step5) step5.className = 'co-step done';
+            if (num5) num5.innerHTML = '<i class="fa-solid fa-check"></i>';
+            const line45 = document.getElementById('line-4-5');
+            if (line45) line45.className = 'co-step-line done';
 
-                if (window.cartManager) {
-                    window.cartManager.cart = [];
-                    window.cartManager.saveCart();
-                    window.cartManager.updateBadges();
-                    window.cartManager.renderCartDrawer();
-                    if (typeof window.renderCartPage === 'function') {
-                        window.renderCartPage();
-                    }
-                }
+            document.getElementById('coLayout').style.display = 'none';
+            document.getElementById('coEmpty').style.display = 'none';
+            document.getElementById('coSuccess').style.display = 'block';
 
-                if (typeof renderEnquirySuccessUI === 'function') {
-                    
-        localStorage.setItem('last_order', JSON.stringify(demoData));
-        window.location.href = 'order-success.html';
-        
-                } else if (typeof window.renderEnquirySuccessUI === 'function') {
-                    window.
-        localStorage.setItem('last_order', JSON.stringify(demoData));
-        window.location.href = 'order-success.html';
-        
-                }
-            }, 500);
+            if (window.cartManager) {
+                window.cartManager.cart = [];
+                window.cartManager.discountPercent = 0;
+                window.cartManager.saveCart();
+                window.cartManager.updateBadges();
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            throw new Error(data.message || 'Failed to complete order submission.');
+        }
+    })
+    .catch(err => {
+        if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-lock"></i> <span id="coPlaceOrderBtnText">Try Again</span>';
+        }
+        if (typeof Swal !== 'undefined') {
+            Swal.fire({ icon: 'error', title: 'Order Submission Error', text: err.message, confirmButtonColor: '#0052cc' });
         } else if (window.cartManager) {
             window.cartManager.showToast('Error: ' + err.message, 'error');
         }
