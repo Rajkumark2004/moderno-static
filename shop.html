@@ -3532,7 +3532,7 @@
         
     // State management for active filters
     let currentFilters = {
-        category: 'all' === 'all' || !'all' ? 'deals' : 'all',
+        category: 'all',
         type: '',
         style: '',
         material: '',
@@ -3787,60 +3787,66 @@
         const searchQuery = (currentFilters.search || '').toLowerCase().trim();
         const minDiscount = Number(currentFilters.discount) || 0;
 
-        let filtered = PRODUCTS.filter(p => {
-            // Category match (supports parent category + child category hierarchy)
+        const allProds = (typeof window.PRODUCTS !== 'undefined' && window.PRODUCTS.length > 0) ? window.PRODUCTS :
+                         (typeof PRODUCTS !== 'undefined' && PRODUCTS.length > 0) ? PRODUCTS : [];
+
+        let filtered = allProds.filter(p => {
+            // Category match
             if (currentFilters.category && currentFilters.category !== 'all') {
-                const filterCat = currentFilters.category.toLowerCase();
-                const isDeals = (filterCat === 'deals' || filterCat === 'one-time-deal');
+                const filterCat = currentFilters.category.toLowerCase().trim();
+                const isDeals = (filterCat === 'deals' || filterCat === 'one-time-deal' || filterCat === 'one time deal');
+
                 if (!isDeals) {
-                    const catObj = (typeof CATEGORIES !== 'undefined') ? CATEGORIES.find(c => (c.slug || '').toLowerCase() === filterCat || String(c.id) === filterCat) : null;
+                    const pCatSlug = (p.categorySlug || '').toLowerCase();
+                    const pParentSlug = (p.parentSlug || '').toLowerCase();
+                    const pCatName = (p.category || p.categoryName || '').toLowerCase();
+                    const pParentCatName = (p.parentCategory || '').toLowerCase();
+                    const pCatId = String(p.categoryId || p.category_id || '');
+
+                    const catObj = (typeof CATEGORIES !== 'undefined') ? CATEGORIES.find(c => (c.slug || '').toLowerCase() === filterCat || String(c.id) === filterCat || (c.name || '').toLowerCase() === filterCat) : null;
+
                     if (catObj) {
+                        const targetId = String(catObj.id);
+                        const targetSlug = (catObj.slug || '').toLowerCase();
+                        const targetName = (catObj.name || '').toLowerCase();
+
                         const isParent = !catObj.parentId && !catObj.parent_id;
                         if (isParent) {
-                            const pIdStr = String(catObj.id);
-                            const pSlug = (catObj.slug || '').toLowerCase();
-                            const kidIds = CATEGORIES.filter(c => String(c.parentId || c.parent_id || '') === pIdStr).map(c => String(c.id));
-                            const kidSlugs = CATEGORIES.filter(c => String(c.parentId || c.parent_id || '') === pIdStr).map(c => (c.slug || '').toLowerCase());
-                            const allIds = [pIdStr, ...kidIds];
-                            const allSlugs = [pSlug, ...kidSlugs];
+                            const kidIds = CATEGORIES.filter(c => String(c.parentId || c.parent_id || '') === targetId).map(c => String(c.id));
+                            const kidSlugs = CATEGORIES.filter(c => String(c.parentId || c.parent_id || '') === targetId).map(c => (c.slug || '').toLowerCase());
+                            const allIds = [targetId, ...kidIds];
+                            const allSlugs = [targetSlug, ...kidSlugs];
 
-                            const matches = allIds.includes(String(p.categoryId || '')) ||
-                                            allSlugs.includes((p.categorySlug || '').toLowerCase()) ||
-                                            String(p.parentCategoryId || '') === pIdStr ||
-                                            (p.parentSlug || '').toLowerCase() === pSlug;
+                            const matches = allIds.includes(pCatId) ||
+                                            allSlugs.includes(pCatSlug) ||
+                                            pCatSlug === targetSlug ||
+                                            pParentSlug === targetSlug ||
+                                            pCatName.includes(targetName) ||
+                                            pParentCatName.includes(targetName);
                             if (!matches) return false;
                         } else {
-                            // Specific child category
-                            const cIdStr = String(catObj.id);
-                            const cSlug = (catObj.slug || '').toLowerCase();
-                            const cName = (catObj.name || '').toLowerCase();
-                            const matches = String(p.categoryId || '') === cIdStr ||
-                                             (p.categorySlug || '').toLowerCase() === cSlug ||
-                                             (p.category || p.categoryName || '').toLowerCase() === cName;
+                            const matches = pCatId === targetId ||
+                                            pCatSlug === targetSlug ||
+                                            pCatName === targetName ||
+                                            pCatName.includes(targetName);
                             if (!matches) return false;
                         }
                     } else {
-                        const pCatSlug = (p.categorySlug || '').toLowerCase();
-                        const pParentSlug = (p.parentSlug || '').toLowerCase();
-                        if (pCatSlug !== filterCat && pParentSlug !== filterCat) return false;
+                        const matches = pCatSlug === filterCat ||
+                                        pParentSlug === filterCat ||
+                                        pCatName.includes(filterCat) ||
+                                        (p.name || '').toLowerCase().includes(filterCat);
+                        if (!matches) return false;
                     }
                 }
             }
 
-            // Type match
-            if (currentFilters.type && p.type !== currentFilters.type) return false;
-
-            // Style match
-            if (currentFilters.style && p.style !== currentFilters.style) return false;
-
-            // Material match
-            if (currentFilters.material && p.material !== currentFilters.material && p.top !== currentFilters.material) return false;
-
-            // Seats match
-            if (currentFilters.seats && p.seats !== currentFilters.seats) return false;
-
-            // Size match
-            if (currentFilters.size && p.size !== currentFilters.size) return false;
+            // Optional Attribute Filters (Safely checked)
+            if (currentFilters.type && p.type && p.type !== currentFilters.type) return false;
+            if (currentFilters.style && p.style && p.style !== currentFilters.style) return false;
+            if (currentFilters.material && p.material && p.material !== currentFilters.material && p.top !== currentFilters.material) return false;
+            if (currentFilters.seats && p.seats && p.seats !== currentFilters.seats) return false;
+            if (currentFilters.size && p.size && p.size !== currentFilters.size) return false;
 
             // Price range match
             if (currentFilters.priceRange === 'under-15000' && p.price >= 15000) return false;
@@ -3859,28 +3865,19 @@
 
             // Search Query
             if (searchQuery) {
-                const text = (p.name + ' ' + p.categoryName + ' ' + (p.materialDesc || '') + ' ' + (p.description || '')).toLowerCase();
+                const text = ((p.name || '') + ' ' + (p.categoryName || '') + ' ' + (p.category || '') + ' ' + (p.description || '')).toLowerCase();
                 if (!text.includes(searchQuery)) return false;
             }
 
             return true;
         });
 
-        // Sorting
-        const sortVal = currentFilters.sort;
-        if (sortVal === 'price-low') {
-            filtered.sort((a, b) => a.price - b.price);
-        } else if (sortVal === 'price-high') {
-            filtered.sort((a, b) => b.price - a.price);
-        } else if (sortVal === 'rating') {
-            filtered.sort((a, b) => b.rating - a.rating);
-        } else if (sortVal === 'discount') {
-            filtered.sort((a, b) => getProductDiscountPct(b) - getProductDiscountPct(a));
+        // Fallback: If filter returns empty for deals, show all products
+        if (filtered.length === 0 && (currentFilters.category === 'deals' || currentFilters.category === 'one-time-deal' || currentFilters.category === 'all')) {
+            filtered = allProds;
         }
 
         lastFilteredCatalogItems = filtered;
-        renderActiveChips();
-        updateActiveFilterBadge();
         renderCatalogGrid(filtered);
     }
 

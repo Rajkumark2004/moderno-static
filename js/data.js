@@ -1,3 +1,25 @@
+window.FAQS = [
+  {
+    "q": "What type of wood is used in Moderno furniture?",
+    "a": "We exclusively craft our furniture using 100% seasoned Solid Sheesham (Indian Rosewood), Grade-A Teak wood, and high-density engineered composites with 10-Year anti-termite guarantee.",
+    "question": "What type of wood is used in Moderno furniture?",
+    "answer": "We exclusively craft our furniture using 100% seasoned Solid Sheesham (Indian Rosewood), Grade-A Teak wood, and high-density engineered composites with 10-Year anti-termite guarantee."
+  },
+  {
+    "q": "Do you offer free delivery and professional installation?",
+    "a": "Yes, we provide 100% Free Doorstep Delivery and room-of-choice installation across Bangalore, Hyderabad, and major metro cities.",
+    "question": "Do you offer free delivery and professional installation?",
+    "answer": "Yes, we provide 100% Free Doorstep Delivery and room-of-choice installation across Bangalore, Hyderabad, and major metro cities."
+  },
+  {
+    "q": "What is your warranty policy?",
+    "a": "All Moderno solid wood products are backed by our comprehensive 10-Year Structural & Anti-Termite Warranty.",
+    "question": "What is your warranty policy?",
+    "answer": "All Moderno solid wood products are backed by our comprehensive 10-Year Structural & Anti-Termite Warranty."
+  }
+];
+if (typeof FAQS === 'undefined') { var FAQS = window.FAQS; }
+
 window.PRODUCTS = [
   {
     "id": "1",
