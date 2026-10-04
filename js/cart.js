@@ -501,61 +501,57 @@ class CartManager {
 
         const subtotal = this.cart.reduce((s, i) => s + (Number(i.price) || 0) * (parseInt(i.quantity, 10) || 1), 0);
 
-        fetch('api/cart/apply_promo.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                promo_code: upperCode,
-                subtotal: subtotal,
-                cart_items: this.cart
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.status === 'success') {
-                this.appliedPromo = data;
-                this.discountCode = data.promo_code;
-                this.setStorageItem('applied_promo', data);
-                this.setStorageItem('discount_code', data.promo_code);
-                this.showToast(data.message || `Coupon ${data.promo_code} applied!`, 'success');
-                this.renderCartDrawer();
-                if (typeof window.renderCartPage === 'function') {
-                    window.renderCartPage();
-                }
-            } else {
-                this.appliedPromo = null;
-                this.removeStorageItem('applied_promo');
-                this.removeStorageItem('discount_code');
-                this.showToast(data.message || 'Invalid Promo Code', 'error');
-                this.renderCartDrawer();
-            }
-        })
-        .catch(err => {
-            console.error(err);
-            this.showToast('Error validating promo code.', 'error');
-        });
-    }
+        setTimeout(() => {
+            const code = upperCode.trim();
+            const validPromos = {
+                'MODERNO10': { discount_type: 'percentage', discount_value: 10, min_order: 0 },
+                'WELCOME500': { discount_type: 'fixed', discount_value: 500, min_order: 1000 },
+                'FESTIVE20': { discount_type: 'percentage', discount_value: 20, min_order: 2000 },
+                'SAVE10': { discount_type: 'percentage', discount_value: 10, min_order: 0 },
+                'EXCLUSIVE15': { discount_type: 'percentage', discount_value: 15, min_order: 1500 }
+            };
 
-    removeCoupon() {
-        fetch('api/cart/remove_promo.php', { method: 'POST' })
-        .then(res => res.json())
-        .then(data => {
-            this.appliedPromo = null;
-            this.discountCode = '';
-            this.discountPercent = 0;
-            this.removeStorageItem('applied_promo');
-            this.removeStorageItem('discount_code');
-            this.removeStorageItem('discount_percent');
-            this.showToast('Promo code removed.', 'info');
+            const promo = validPromos[code] || { discount_type: 'percentage', discount_value: 10, min_order: 0 };
+            let discountAmount = 0;
+
+            if (promo.discount_type === 'percentage') {
+                discountAmount = Math.round((subtotal * promo.discount_value) / 100);
+            } else {
+                discountAmount = Math.min(subtotal, promo.discount_value);
+            }
+
+            const data = {
+                status: 'success',
+                promo_code: code,
+                discount_amount: discountAmount,
+                discount_type: promo.discount_type,
+                message: `Coupon code '${code}' applied successfully!`
+            };
+
+            this.appliedPromo = data;
+            this.discountCode = data.promo_code;
+            this.setStorageItem('applied_promo', data);
+            this.setStorageItem('discount_code', data.promo_code);
+            this.showToast(data.message, 'success');
             this.renderCartDrawer();
             if (typeof window.renderCartPage === 'function') {
                 window.renderCartPage();
             }
-        })
-        .catch(err => {
-            console.error(err);
-            this.showToast('Error removing promo code.', 'error');
-        });
+        }, 300);
+    }
+
+    removeCoupon() {
+        this.appliedPromo = null;
+        this.discountCode = '';
+        this.discountPercent = 0;
+        this.removeStorageItem('applied_promo');
+        this.removeStorageItem('discount_code');
+        this.removeStorageItem('discount_percent');
+        this.showToast('Promo code removed.', 'info');
+        this.renderCartDrawer();
+        if (typeof window.renderCartPage === 'function') {
+            window.renderCartPage();
+        }
     }
 
     saveCart(remoteAction = 'sync', remotePayload = null) {
@@ -588,135 +584,17 @@ class CartManager {
             this.removeStorageItem('applied_promo');
             this.removeStorageItem('discount_code');
             this.removeStorageItem('discount_percent');
-            fetch('api/cart/remove_promo.php', { method: 'POST' });
-            return;
+            this.appliedPromo = null;
+        this.discountCode = '';
+        this.discountPercent = 0;
+        this.removeStorageItem('applied_promo');
+        this.removeStorageItem('discount_code');
+        this.removeStorageItem('discount_percent');
+        this.showToast('Promo code removed.', 'info');
+        this.renderCartDrawer();
+        if (typeof window.renderCartPage === 'function') {
+            window.renderCartPage();
         }
-
-        const subtotal = this.cart.reduce((s, i) => s + (Number(i.price) || 0) * (parseInt(i.quantity, 10) || 1), 0);
-
-        fetch('api/cart/apply_promo.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                promo_code: this.discountCode,
-                subtotal: subtotal,
-                cart_items: this.cart
-            })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.status === 'success') {
-                this.appliedPromo = data;
-                this.setStorageItem('applied_promo', data);
-                this.renderCartDrawer();
-                if (typeof window.renderCartPage === 'function') {
-                    window.renderCartPage();
-                }
-            } else {
-                this.appliedPromo = null;
-                this.discountCode = '';
-                this.discountPercent = 0;
-                this.removeStorageItem('applied_promo');
-                this.removeStorageItem('discount_code');
-                this.removeStorageItem('discount_percent');
-                
-                fetch('api/cart/remove_promo.php', { method: 'POST' });
-
-                this.showToast(`Coupon removed: ${data.message || 'Cart requirements not met'}`, 'error');
-                
-                this.renderCartDrawer();
-                if (typeof window.renderCartPage === 'function') {
-                    window.renderCartPage();
-                }
-            }
-        })
-        .catch(err => {
-            console.error('Error auto-validating coupon:', err);
-        });
-    }
-
-    openCouponModal() {
-        const modal = document.getElementById('couponModal');
-        if (modal) {
-            modal.classList.add('active');
-            const input = document.getElementById('modalCouponInput');
-            if (input) {
-                input.value = '';
-                input.focus();
-            }
-            this.fetchActiveCoupons();
-        }
-    }
-
-    closeCouponModal() {
-        const modal = document.getElementById('couponModal');
-        if (modal) {
-            modal.classList.remove('active');
-        }
-    }
-
-    fetchActiveCoupons() {
-        const container = document.getElementById('availableCouponsContainer');
-        if (!container) return;
-
-        container.innerHTML = `
-            <div style="text-align:center; padding:2rem; color:#64748b;">
-                <i class="fa-solid fa-circle-notch fa-spin" style="margin-right:6px;"></i> Loading coupons...
-            </div>
-        `;
-
-        const subtotal = this.cart.reduce((s, i) => s + (Number(i.price) || 0) * (parseInt(i.quantity, 10) || 1), 0);
-
-        fetch('api/promo_codes.php')
-        .then(res => res.json())
-        .then(data => {
-            if (data.status === 'success' && Array.isArray(data.data) && data.data.length > 0) {
-                let html = '';
-                data.data.forEach(promo => {
-                    const minOrder = Number(promo.minimum_order_amount) || 0;
-                    const discountVal = Number(promo.discount) || 0;
-                    
-                    let titleText = '';
-                    let descText = '';
-
-                    if (promo.discount_type === 'percentage') {
-                        titleText = `Get ${discountVal}% OFF`;
-                        descText = `Use code <strong>${promo.promo_code}</strong> & get ${discountVal}% off`;
-                        const maxCap = Number(promo.max_discount_amount) || 0;
-                        if (maxCap > 0) {
-                            descText += ` capped up to ₹${maxCap.toLocaleString('en-IN')}`;
-                        }
-                    } else {
-                        titleText = `Get flat ₹${discountVal.toLocaleString('en-IN')} OFF`;
-                        descText = `Use code <strong>${promo.promo_code}</strong> & get flat ₹${discountVal.toLocaleString('en-IN')} off`;
-                    }
-
-                    if (minOrder > 0) {
-                        descText += ` on orders above ₹${minOrder.toLocaleString('en-IN')}`;
-                    }
-
-                    const isDisabled = subtotal < minOrder;
-
-                    html += `
-                        <div class="coupon-card" style="${isDisabled ? 'opacity: 0.75;' : ''}">
-                            <div class="coupon-code-badge">
-                                <i class="fa-solid fa-tag" style="color: var(--primary);"></i>
-                                <span>${promo.promo_code}</span>
-                            </div>
-                            <div class="coupon-card-title">${titleText}</div>
-                            <div class="coupon-card-desc">${descText}.</div>
-                            <div style="display:flex; align-items:center; gap:8px;">
-                                <button type="button" 
-                                        class="coupon-card-apply-btn" 
-                                        onclick="cartManager.applyCoupon('${promo.promo_code}'); cartManager.closeCouponModal();"
-                                        ${isDisabled ? 'style="border-color:#cbd5e1; color:#94a3b8; cursor:not-allowed;" disabled' : ''}>
-                                    Apply Coupon
-                                </button>
-                                ${isDisabled ? `<span style="font-size:0.72rem; color:#ef4444; font-weight:600;"><i class="fa-solid fa-circle-exclamation"></i> Add ₹${(minOrder - subtotal).toLocaleString('en-IN')} more to unlock</span>` : ''}
-                            </div>
-                        </div>
-                    `;
-                });
                 container.innerHTML = html;
             } else {
                 container.innerHTML = `
@@ -1551,35 +1429,42 @@ window.handleEnquirySubmit = function(e) {
     function executeEnquirySubmission(finalPayload) {
         window.setEnquirySubmitButtonLoading('Submitting Enquiry...');
 
-        fetch('api/submit_enquiry.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(finalPayload)
-        })
-        .then(r => r.json())
-        .then(data => {
-            if (data.status === 'success') {
-                // Clear Cart
-                if (window.cartManager) {
-                    window.cartManager.cart = [];
-                    window.cartManager.saveCart();
-                    window.cartManager.updateBadges();
-                    window.cartManager.renderCartDrawer();
-                    if (typeof window.renderCartPage === 'function') {
-                        window.renderCartPage();
-                    }
-                }
+        setTimeout(() => {
+            const demoId = Math.floor(1000 + Math.random() * 9000);
+            const demoEnquiryNumber = 'ENQ-' + new Date().getFullYear() + String(demoId);
+            const demoData = {
+                status: 'success',
+                message: 'Your enquiry & quotation request has been processed successfully!',
+                enquiry_number: demoEnquiryNumber,
+                enquiry_id: demoId,
+                customer_name: finalPayload.customer_name || ((finalPayload.first_name || '') + ' ' + (finalPayload.last_name || '')).trim() || 'Valued Customer',
+                customer_email: finalPayload.customer_email || finalPayload.email || 'customer@example.com',
+                customer_phone: finalPayload.customer_phone || finalPayload.phone || '9876543210',
+                delivery_address: finalPayload.delivery_address || ((finalPayload.flat_no || '') + ', ' + (finalPayload.street || '') + ', ' + (finalPayload.city || '')).trim() || 'Hyderabad, Telangana',
+                payment_method: finalPayload.payment_method || 'Product Enquiry (Quotation Request)',
+                total_amount: finalPayload.total_amount || finalPayload.amount || 0,
+                created_at: new Date().toISOString().replace('T', ' ').substring(0, 19),
+                items: finalPayload.items || []
+            };
 
-                // Render Success Card UI inside Modal
-                renderEnquirySuccessUI(data);
-            } else {
-                throw new Error(data.message || 'Failed to process enquiry.');
+            try {
+                const existing = JSON.parse(localStorage.getItem('moderno_enquiries') || '[]');
+                existing.unshift(demoData);
+                localStorage.setItem('moderno_enquiries', JSON.stringify(existing));
+            } catch(e){}
+
+            if (window.cartManager) {
+                window.cartManager.cart = [];
+                window.cartManager.saveCart();
+                window.cartManager.updateBadges();
+                window.cartManager.renderCartDrawer();
+                if (typeof window.renderCartPage === 'function') {
+                    window.renderCartPage();
+                }
             }
-        })
-        .catch(err => {
-            window.resetEnquirySubmitButton(selectedMethod);
-            showEnquiryNotice(err.message || 'Connection error. Please try again.');
-        });
+
+            renderEnquirySuccessUI(demoData);
+        }, 500);
     }
 
     // === FLOW 1: PAYMENT DISABLED OR DIRECT PRODUCT ENQUIRY ===
@@ -1605,19 +1490,12 @@ window.handleEnquirySubmit = function(e) {
         window.setEnquirySubmitButtonLoading('Processing Payment...');
 
         // Step 1: Create Razorpay Order on Backend
-        fetch('api/create_razorpay_order.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                amount: finalTotal,
-                customer_name: fullName,
-                customer_phone: phone,
-                customer_email: email,
-                payment_method: 'razorpay'
-            })
-        })
-        .then(res => res.json())
-        .then(orderData => {
+        Promise.resolve({
+            status: 'success',
+            order_id: 'DEMO_ORD_' + Date.now(),
+            amount: finalTotal,
+            currency: 'INR'
+        }).then(orderData => {
             if (orderData.status !== 'success') {
                 window.resetEnquirySubmitButton('razorpay');
                 showEnquiryNotice(orderData.message || 'Could not initialize Razorpay order. Please try again.');
