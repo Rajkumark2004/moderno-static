@@ -3108,47 +3108,43 @@ function executeFinalCheckoutSubmission(finalPayload) {
         btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Finalizing Order...';
     }
 
-    fetch('api/submit_enquiry.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(finalPayload)
-    })
-    .then(r => r.json())
-    .then(data => {
-        if (data.status === 'success') {
-            document.getElementById('coOrderId').textContent = 'Order Reference #: ' + data.enquiry_number;
+    setTimeout(() => {
+        const demoId = Math.floor(1000 + Math.random() * 9000);
+        const demoEnquiryNumber = 'ENQ-' + new Date().getFullYear() + String(demoId);
+        const data = {
+            status: 'success',
+            message: 'Your enquiry & quotation request has been processed successfully!',
+            enquiry_number: demoEnquiryNumber,
+            enquiry_id: demoId
+        };
 
-            updateProgressBar(5);
-            const step5 = document.getElementById('step-btn-5');
-            const num5 = document.getElementById('step-num-5');
-            if (step5) step5.className = 'co-step done';
-            if (num5) num5.innerHTML = '<i class="fa-solid fa-check"></i>';
-            const line45 = document.getElementById('line-4-5');
-            if (line45) line45.className = 'co-step-line done';
+        const orderIdElem = document.getElementById('coOrderId');
+        if (orderIdElem) orderIdElem.textContent = 'Order Reference #: ' + data.enquiry_number;
 
-            document.getElementById('coLayout').style.display = 'none';
-            document.getElementById('coEmpty').style.display = 'none';
-            document.getElementById('coSuccess').style.display = 'block';
+        if (typeof updateProgressBar === 'function') updateProgressBar(5);
+        const step5 = document.getElementById('step-btn-5');
+        const num5 = document.getElementById('step-num-5');
+        if (step5) step5.className = 'co-step done';
+        if (num5) num5.innerHTML = '<i class="fa-solid fa-check"></i>';
+        const line45 = document.getElementById('line-4-5');
+        if (line45) line45.className = 'co-step-line done';
 
-            if (window.cartManager) {
-                window.cartManager.cart = [];
-                window.cartManager.discountPercent = 0;
-                window.cartManager.saveCart();
-                window.cartManager.updateBadges();
-            }
+        const coLayout = document.getElementById('coLayout');
+        const coEmpty = document.getElementById('coEmpty');
+        const coSuccess = document.getElementById('coSuccess');
+        if (coLayout) coLayout.style.display = 'none';
+        if (coEmpty) coEmpty.style.display = 'none';
+        if (coSuccess) coSuccess.style.display = 'block';
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-            throw new Error(data.message || 'Failed to complete order submission.');
+        if (window.cartManager) {
+            window.cartManager.cart = [];
+            window.cartManager.discountPercent = 0;
+            window.cartManager.saveCart();
+            window.cartManager.updateBadges();
         }
-    })
-    .catch(err => {
-        if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fa-solid fa-lock"></i> <span id="coPlaceOrderBtnText">Try Again</span>';
-        }
-        if (typeof Swal !== 'undefined') {
-            Swal.fire({ icon: 'error', title: 'Order Submission Error', text: err.message, confirmButtonColor: '#0052cc' });
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 300);
         } else if (window.cartManager) {
             window.cartManager.showToast('Error: ' + err.message, 'error');
         }

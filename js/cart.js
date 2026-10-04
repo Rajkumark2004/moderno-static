@@ -1551,35 +1551,38 @@ window.handleEnquirySubmit = function(e) {
     function executeEnquirySubmission(finalPayload) {
         window.setEnquirySubmitButtonLoading('Submitting Enquiry...');
 
-        fetch('api/submit_enquiry.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(finalPayload)
-        })
-        .then(r => r.json())
-        .then(data => {
-            if (data.status === 'success') {
-                // Clear Cart
-                if (window.cartManager) {
-                    window.cartManager.cart = [];
-                    window.cartManager.saveCart();
-                    window.cartManager.updateBadges();
-                    window.cartManager.renderCartDrawer();
-                    if (typeof window.renderCartPage === 'function') {
-                        window.renderCartPage();
-                    }
-                }
+        setTimeout(() => {
+            const demoId = Math.floor(1000 + Math.random() * 9000);
+            const demoEnquiryNumber = 'ENQ-' + new Date().getFullYear() + String(demoId);
+            const data = {
+                status: 'success',
+                message: 'Your enquiry & quotation request has been processed successfully!',
+                enquiry_number: demoEnquiryNumber,
+                enquiry_id: demoId,
+                customer_name: finalPayload.customer_name || ((finalPayload.first_name || '') + ' ' + (finalPayload.last_name || '')).trim() || 'Valued Customer',
+                customer_email: finalPayload.customer_email || finalPayload.email || 'customer@example.com',
+                customer_phone: finalPayload.customer_phone || finalPayload.phone || '9876543210',
+                delivery_address: finalPayload.delivery_address || ((finalPayload.flat_no || '') + ', ' + (finalPayload.street || '') + ', ' + (finalPayload.city || '')).trim() || 'Hyderabad, Telangana',
+                payment_method: finalPayload.payment_method || 'Product Enquiry (Quotation Request)',
+                total_amount: finalPayload.total_amount || finalPayload.amount || 0,
+                created_at: new Date().toISOString().replace('T', ' ').substring(0, 19),
+                items: finalPayload.items || []
+            };
 
-                // Render Success Card UI inside Modal
-                renderEnquirySuccessUI(data);
-            } else {
-                throw new Error(data.message || 'Failed to process enquiry.');
+            // Clear Cart
+            if (window.cartManager) {
+                window.cartManager.cart = [];
+                window.cartManager.saveCart();
+                window.cartManager.updateBadges();
+                window.cartManager.renderCartDrawer();
+                if (typeof window.renderCartPage === 'function') {
+                    window.renderCartPage();
+                }
             }
-        })
-        .catch(err => {
-            window.resetEnquirySubmitButton(selectedMethod);
-            showEnquiryNotice(err.message || 'Connection error. Please try again.');
-        });
+
+            // Render Success Card UI inside Modal
+            renderEnquirySuccessUI(data);
+        }, 300);
     }
 
     // === FLOW 1: PAYMENT DISABLED OR DIRECT PRODUCT ENQUIRY ===
