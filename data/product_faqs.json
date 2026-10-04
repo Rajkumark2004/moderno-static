@@ -1,0 +1,22 @@
+[
+  {
+    "id": 3,
+    "product_id": 1,
+    "question": "Is this Sofas washable?",
+    "answer": "Yes, the fabric cover is removable and washable.",
+    "sort_order": 0,
+    "is_active": 1,
+    "created_at": "2026-08-13 12:34:32",
+    "updated_at": "2026-08-13 12:34:32"
+  },
+  {
+    "id": 4,
+    "product_id": 1,
+    "question": "Is assembly required?",
+    "answer": "Yes, basic carpenter assembly is provided free at delivery.",
+    "sort_order": 0,
+    "is_active": 1,
+    "created_at": "2026-08-13 12:34:32",
+    "updated_at": "2026-08-13 12:34:32"
+  }
+]

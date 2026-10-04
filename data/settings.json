@@ -1,0 +1,450 @@
+[
+  {
+    "id": 1,
+    "setting_key": "app_name",
+    "setting_value": "MODERNO",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 2,
+    "setting_key": "support_email",
+    "setting_value": "support@moderno.com",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 3,
+    "setting_key": "contact_number",
+    "setting_value": "+91 80000 12345",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 4,
+    "setting_key": "store_address",
+    "setting_value": "124, Luxury Furnishings Blvd, Indiranagar, Bangalore, Karnataka 560038",
+    "group_name": "general",
+    "updated_at": "2026-08-13 17:35:44"
+  },
+  {
+    "id": 5,
+    "setting_key": "currency_symbol",
+    "setting_value": "\u20b9",
+    "group_name": "general",
+    "updated_at": "2026-08-13 17:35:44"
+  },
+  {
+    "id": 6,
+    "setting_key": "currency_code",
+    "setting_value": "INR",
+    "group_name": "general",
+    "updated_at": "2026-08-13 17:35:44"
+  },
+  {
+    "id": 7,
+    "setting_key": "free_shipping_threshold",
+    "setting_value": "50000.00",
+    "group_name": "shipping",
+    "updated_at": "2026-08-13 17:35:44"
+  },
+  {
+    "id": 8,
+    "setting_key": "standard_shipping_fee",
+    "setting_value": "999.00",
+    "group_name": "shipping",
+    "updated_at": "2026-08-13 17:35:44"
+  },
+  {
+    "id": 9,
+    "setting_key": "tax_percentage",
+    "setting_value": "18.00",
+    "group_name": "general",
+    "updated_at": "2026-08-13 17:35:44"
+  },
+  {
+    "id": 10,
+    "setting_key": "working_hours",
+    "setting_value": "Mon - Sat: 10:00 AM - 8:00 PM",
+    "group_name": "general",
+    "updated_at": "2026-08-24 11:47:11"
+  },
+  {
+    "id": 11,
+    "setting_key": "instagram_url",
+    "setting_value": "https://instagram.com/moderno_luxury",
+    "group_name": "social",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 12,
+    "setting_key": "facebook_url",
+    "setting_value": "https://facebook.com/modernoluxury",
+    "group_name": "social",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 13,
+    "setting_key": "pinterest_url",
+    "setting_value": "https://pinterest.com/moderno_furniture",
+    "group_name": "social",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 14,
+    "setting_key": "youtube_url",
+    "setting_value": "https://youtube.com/@modernofurniture",
+    "group_name": "social",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 15,
+    "setting_key": "sms_enabled",
+    "setting_value": "1",
+    "group_name": "sms",
+    "updated_at": "2026-09-10 15:20:08"
+  },
+  {
+    "id": 16,
+    "setting_key": "sms_provider",
+    "setting_value": "fast2sms",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 17,
+    "setting_key": "sms_api_key",
+    "setting_value": "",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 18,
+    "setting_key": "sms_sender_id",
+    "setting_value": "MODRNO",
+    "group_name": "sms",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 19,
+    "setting_key": "sms_dlt_entity_id",
+    "setting_value": "",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 20,
+    "setting_key": "sms_api_url",
+    "setting_value": "https://www.fast2sms.com/dev/bulkV2",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 21,
+    "setting_key": "sms_default_country_code",
+    "setting_value": "+91",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 22,
+    "setting_key": "sms_template_login_otp",
+    "setting_value": "DLT_LOGIN_OTP_01",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 23,
+    "setting_key": "sms_template_register_otp",
+    "setting_value": "DLT_REG_OTP_01",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 24,
+    "setting_key": "sms_template_order_conf",
+    "setting_value": "DLT_ORDER_CONF_01",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 25,
+    "setting_key": "sms_template_enquiry_conf",
+    "setting_value": "DLT_ENQUIRY_CONF_01",
+    "group_name": "sms",
+    "updated_at": "2026-08-18 16:22:12"
+  },
+  {
+    "id": 26,
+    "setting_key": "notif_order",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 27,
+    "setting_key": "notif_enquiry",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 28,
+    "setting_key": "notif_user_reg",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 29,
+    "setting_key": "notif_pay_success",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 30,
+    "setting_key": "notif_pay_failed",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 31,
+    "setting_key": "notif_low_stock",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 32,
+    "setting_key": "notif_sound",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 16:27:52"
+  },
+  {
+    "id": 40,
+    "setting_key": "notif_email_status",
+    "setting_value": "0",
+    "group_name": "notification",
+    "updated_at": "2026-08-24 18:50:13"
+  },
+  {
+    "id": 41,
+    "setting_key": "notif_whatsapp_status",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 42,
+    "setting_key": "notif_event_new_enquiry",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 43,
+    "setting_key": "notif_event_enquiry_status",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 44,
+    "setting_key": "notif_event_order_confirmed",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 45,
+    "setting_key": "notif_event_pay_success",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 46,
+    "setting_key": "notif_event_pay_failed",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 47,
+    "setting_key": "notif_event_order_completed",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 48,
+    "setting_key": "notif_event_order_cancelled",
+    "setting_value": "1",
+    "group_name": "notification",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 49,
+    "setting_key": "whatsapp_enabled",
+    "setting_value": "1",
+    "group_name": "whatsapp",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 50,
+    "setting_key": "whatsapp_provider",
+    "setting_value": "generic",
+    "group_name": "whatsapp",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 51,
+    "setting_key": "whatsapp_api_url",
+    "setting_value": "https://api.whatsapp.com/v1/messages",
+    "group_name": "whatsapp",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 52,
+    "setting_key": "whatsapp_api_key",
+    "setting_value": "",
+    "group_name": "whatsapp",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 53,
+    "setting_key": "whatsapp_instance_id",
+    "setting_value": "",
+    "group_name": "whatsapp",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 54,
+    "setting_key": "whatsapp_sender_phone",
+    "setting_value": "",
+    "group_name": "whatsapp",
+    "updated_at": "2026-08-18 17:07:14"
+  },
+  {
+    "id": 55,
+    "setting_key": "site_logo",
+    "setting_value": "images/logo.svg",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 68,
+    "setting_key": "sms_otp_login_enabled",
+    "setting_value": "0",
+    "group_name": "sms",
+    "updated_at": "2026-09-10 15:20:08"
+  },
+  {
+    "id": 118,
+    "setting_key": "experience_centers_section_enabled",
+    "setting_value": "1",
+    "group_name": "general",
+    "updated_at": "2026-09-21 16:26:39"
+  },
+  {
+    "id": 123,
+    "setting_key": "payment_methods_master_enabled",
+    "setting_value": "1",
+    "group_name": "general",
+    "updated_at": "2026-08-26 16:26:09"
+  },
+  {
+    "id": 147,
+    "setting_key": "site_tagline",
+    "setting_value": "Contemporary Italian Furniture Studio",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 150,
+    "setting_key": "site_favicon",
+    "setting_value": "images/favicon.svg",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 188,
+    "setting_key": "contact_title",
+    "setting_value": "Get in Touch with Moderno",
+    "group_name": "contact",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 189,
+    "setting_key": "toll_free",
+    "setting_value": "+91 80000 12345",
+    "group_name": "contact",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 190,
+    "setting_key": "office_address",
+    "setting_value": "Plot 45, Jubilee Hills Rd No 36, Hyderabad, Telangana 500033",
+    "group_name": "contact",
+    "updated_at": "2026-09-16 14:39:08"
+  },
+  {
+    "id": 197,
+    "setting_key": "hero_promo_active",
+    "setting_value": "1",
+    "group_name": "hero_banner",
+    "updated_at": "2026-09-16 16:23:14"
+  },
+  {
+    "id": 198,
+    "setting_key": "hero_promo_icon",
+    "setting_value": "fa-solid fa-percent",
+    "group_name": "hero_banner",
+    "updated_at": "2026-09-16 16:19:27"
+  },
+  {
+    "id": 199,
+    "setting_key": "hero_promo_bold_1",
+    "setting_value": "NO COST EMI",
+    "group_name": "hero_banner",
+    "updated_at": "2026-09-16 16:19:27"
+  },
+  {
+    "id": 200,
+    "setting_key": "hero_promo_mid",
+    "setting_value": "AND",
+    "group_name": "hero_banner",
+    "updated_at": "2026-09-16 16:19:27"
+  },
+  {
+    "id": 201,
+    "setting_key": "hero_promo_highlight",
+    "setting_value": "10% INSTANT DISCOUNT",
+    "group_name": "hero_banner",
+    "updated_at": "2026-09-16 16:19:27"
+  },
+  {
+    "id": 202,
+    "setting_key": "hero_promo_details",
+    "setting_value": "WITH LEADING BANKS \u2022 10-YEAR WARRANTY & FREE DELIVERY",
+    "group_name": "hero_banner",
+    "updated_at": "2026-09-16 16:19:27"
+  },
+  {
+    "id": 226,
+    "setting_key": "footer_logo",
+    "setting_value": "images/logo_white.svg",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  },
+  {
+    "id": 227,
+    "setting_key": "site_footer_logo",
+    "setting_value": "images/logo_white.svg",
+    "group_name": "general",
+    "updated_at": "2026-10-03 10:56:32"
+  }
+]

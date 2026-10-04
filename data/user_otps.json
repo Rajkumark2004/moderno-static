@@ -1,0 +1,22 @@
+[
+  {
+    "id": 2,
+    "phone": "+919347750075",
+    "otp_hash": "$2y$10$GZW9bKhmpa/SenHlWPEWV.qSfQiX07enQz8d62u5NQGPLbyr1J4b6",
+    "purpose": "login",
+    "attempts": 0,
+    "is_used": 0,
+    "expires_at": "2026-08-21 15:22:04",
+    "created_at": "2026-08-21 15:12:04"
+  },
+  {
+    "id": 3,
+    "phone": "+919347750075",
+    "otp_hash": "$2y$10$ZUc4PC6C/ZaCVF3ZQP3SVOLLZO5kPPto4P2lOV0Qux9xyVfVy/722",
+    "purpose": "login",
+    "attempts": 0,
+    "is_used": 0,
+    "expires_at": "2026-08-22 13:11:57",
+    "created_at": "2026-08-22 13:01:57"
+  }
+]

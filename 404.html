@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            var search = window.location.search;
+            var hash = window.location.hash;
+            
+            // If URL doesn't end with .html or .css or .js or .png/jpg
+            if (!path.includes('.')) {
+                var cleanPath = path.endsWith('/') ? path.slice(0, -1) : path;
+                var target = cleanPath + '.html' + search + hash;
+                window.location.replace(target);
+            } else if (path.endsWith('.php')) {
+                var target = path.replace(/\.php$/, '.html') + search + hash;
+                window.location.replace(target);
+            }
+        })();
+    </script>
+</head>
+<body style="background:#0f172a;color:#fff;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;">
+    <div style="text-align:center;">
+        <h2>Redirecting to page...</h2>
+        <p>If you are not redirected automatically, <a id="redirect-link" href="#" style="color:#6366f1;">click here</a>.</p>
+    </div>
+    <script>
+        var path = window.location.pathname.replace(/\.php$/, '');
+        if (!path.endsWith('.html')) path += '.html';
+        document.getElementById('redirect-link').href = path + window.location.search + window.location.hash;
+    </script>
+</body>
+</html>

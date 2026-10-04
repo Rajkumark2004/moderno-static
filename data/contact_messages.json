@@ -1,0 +1,38 @@
+[
+  {
+    "id": 15,
+    "name": "Gayathri A",
+    "email": "a.gayathri.sbd@gmail.com",
+    "phone": "8171718199",
+    "subject": "Order Tracking & Delivery",
+    "message": "test",
+    "status": "read",
+    "admin_notes": null,
+    "last_replied_at": null,
+    "created_at": "2026-08-21 17:36:25"
+  },
+  {
+    "id": 16,
+    "name": "Sai Charan P",
+    "email": "p.saicharan.sbd@gmail.com",
+    "phone": "03456754389",
+    "subject": "Product Details & Pricing",
+    "message": "testing",
+    "status": "read",
+    "admin_notes": null,
+    "last_replied_at": null,
+    "created_at": "2026-08-24 13:22:35"
+  },
+  {
+    "id": 17,
+    "name": "SAI AKHIL",
+    "email": "akhil@gmail.com",
+    "phone": "9347750075",
+    "subject": "Showroom Visit & Trial",
+    "message": "tell",
+    "status": "read",
+    "admin_notes": null,
+    "last_replied_at": null,
+    "created_at": "2026-08-24 13:23:02"
+  }
+]

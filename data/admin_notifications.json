@@ -1,0 +1,32 @@
+[
+  {
+    "id": 20,
+    "type": "enquiry",
+    "title": "New Product Order / Enquiry Received",
+    "message": "Order #ENQ-20260908-AD34 by CHARAN PANDA for \u20b929,647",
+    "reference_id": "125",
+    "action_url": "admin/orders/enquiries?search=ENQ-20260908-AD34",
+    "is_read": 1,
+    "created_at": "2026-09-08 18:14:20"
+  },
+  {
+    "id": 21,
+    "type": "enquiry",
+    "title": "New Product Order / Enquiry Received",
+    "message": "Order #ENQ-20260910-BEEC by Sai Charan PANDA for \u20b910,000",
+    "reference_id": "126",
+    "action_url": "admin/orders/enquiries?search=ENQ-20260910-BEEC",
+    "is_read": 1,
+    "created_at": "2026-09-10 14:52:39"
+  },
+  {
+    "id": 22,
+    "type": "enquiry",
+    "title": "New Product Order / Enquiry Received",
+    "message": "Order #ENQ-20261003-1A01 by Demo Customer for \u20b90",
+    "reference_id": "128",
+    "action_url": "admin/orders/enquiries?search=ENQ-20261003-1A01",
+    "is_read": 0,
+    "created_at": "2026-10-03 11:15:26"
+  }
+]

@@ -1,0 +1,1274 @@
+[
+  {
+    "id": 2,
+    "image_name": "banner_1786529022_769.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 3,
+    "image_name": "banner_1786529402_622.png",
+    "image_type": "image/png",
+    "image_size": 820392,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 4,
+    "image_name": "banner_1786529469_519.png",
+    "image_type": "image/png",
+    "image_size": 820392,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 5,
+    "image_name": "banner_1786529857_708.png",
+    "image_type": "image/png",
+    "image_size": 845266,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 6,
+    "image_name": "cat_1786531184_899.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 7,
+    "image_name": "cat_1786531242_446.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 8,
+    "image_name": "cat_1786531256_275.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 9,
+    "image_name": "cat_1786534582_262.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 10,
+    "image_name": "cat_1786534621_268.png",
+    "image_type": "image/png",
+    "image_size": 138074,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 11,
+    "image_name": "cat_1786534649_863.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 12,
+    "image_name": "cat_1786535120_754.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 13,
+    "image_name": "cat_1786535172_381.webp",
+    "image_type": "image/webp",
+    "image_size": 8104,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 14,
+    "image_name": "cat_banner_1786531184_800.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 15,
+    "image_name": "cat_banner_1786531242_851.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:45",
+    "updated_at": "2026-08-13 10:59:45"
+  },
+  {
+    "id": 16,
+    "image_name": "cat_banner_1786531256_432.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-13 10:59:46",
+    "updated_at": "2026-08-13 10:59:46"
+  },
+  {
+    "id": 17,
+    "image_name": "prod_1786538671.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 10:59:46",
+    "updated_at": "2026-08-13 10:59:46"
+  },
+  {
+    "id": 18,
+    "image_name": "prod_1786538755.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 10:59:46",
+    "updated_at": "2026-08-13 10:59:46"
+  },
+  {
+    "id": 19,
+    "image_name": "prod_1786538897.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 10:59:46",
+    "updated_at": "2026-08-13 10:59:46"
+  },
+  {
+    "id": 20,
+    "image_name": "prod_1786539466.png",
+    "image_type": "image/png",
+    "image_size": 1874086,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 21,
+    "image_name": "prod_other_1786539466_0.png",
+    "image_type": "image/png",
+    "image_size": 1874086,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 22,
+    "image_name": "banner_bed_collection.png",
+    "image_type": "image/png",
+    "image_size": 782157,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 23,
+    "image_name": "banner_bed_collection_1786450124951.png",
+    "image_type": "image/png",
+    "image_size": 826982,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 24,
+    "image_name": "banner_dining_collection.png",
+    "image_type": "image/png",
+    "image_size": 845266,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 25,
+    "image_name": "banner_dining_collection_1786450025141.png",
+    "image_type": "image/png",
+    "image_size": 910404,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 26,
+    "image_name": "banner_emi_offer.png",
+    "image_type": "image/png",
+    "image_size": 726696,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 27,
+    "image_name": "banner_emi_offer_1786450224366.png",
+    "image_type": "image/png",
+    "image_size": 510836,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 28,
+    "image_name": "banner_exchange_offer.png",
+    "image_type": "image/png",
+    "image_size": 627840,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 30,
+    "image_name": "banner_sofa_collection.png",
+    "image_type": "image/png",
+    "image_size": 820392,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 31,
+    "image_name": "banner_sofa_collection_1786450007429.png",
+    "image_type": "image/png",
+    "image_size": 803634,
+    "created_at": "2026-08-13 11:00:53",
+    "updated_at": "2026-08-13 11:00:53"
+  },
+  {
+    "id": 35,
+    "image_name": "sofa-cum-bed.webp",
+    "image_type": "image/webp",
+    "image_size": 47984,
+    "created_at": "2026-08-13 11:19:24",
+    "updated_at": "2026-08-13 11:19:24"
+  },
+  {
+    "id": 36,
+    "image_name": "Sofas.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 11:19:24",
+    "updated_at": "2026-08-13 11:19:24"
+  },
+  {
+    "id": 37,
+    "image_name": "sofa-cum-bed.webp",
+    "image_type": "image/webp",
+    "image_size": 47984,
+    "created_at": "2026-08-13 12:13:42",
+    "updated_at": "2026-08-13 12:13:42"
+  },
+  {
+    "id": 38,
+    "image_name": "sofa-cum-bed.webp",
+    "image_type": "image/webp",
+    "image_size": 47984,
+    "created_at": "2026-08-13 12:16:16",
+    "updated_at": "2026-08-13 12:16:16"
+  },
+  {
+    "id": 39,
+    "image_name": "Sofas.webp",
+    "image_type": "image/webp",
+    "image_size": 35632,
+    "created_at": "2026-08-13 12:58:39",
+    "updated_at": "2026-08-13 12:58:39"
+  },
+  {
+    "id": 40,
+    "image_name": "ready-stock.webp",
+    "image_type": "image/webp",
+    "image_size": 12580,
+    "created_at": "2026-08-13 14:41:12",
+    "updated_at": "2026-08-13 14:41:12"
+  },
+  {
+    "id": 41,
+    "image_name": "Beds.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 51518,
+    "created_at": "2026-08-13 15:01:14",
+    "updated_at": "2026-08-13 15:01:14"
+  },
+  {
+    "id": 42,
+    "image_name": "Beds.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 51518,
+    "created_at": "2026-08-13 15:02:14",
+    "updated_at": "2026-08-13 15:02:14"
+  },
+  {
+    "id": 43,
+    "image_name": "lamps.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 19870,
+    "created_at": "2026-08-13 15:02:33",
+    "updated_at": "2026-08-13 15:02:33"
+  },
+  {
+    "id": 44,
+    "image_name": "book-shelves.webp",
+    "image_type": "image/webp",
+    "image_size": 51214,
+    "created_at": "2026-08-13 15:03:39",
+    "updated_at": "2026-08-13 15:03:39"
+  },
+  {
+    "id": 45,
+    "image_name": "Dining.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 59503,
+    "created_at": "2026-08-13 15:04:07",
+    "updated_at": "2026-08-13 15:04:07"
+  },
+  {
+    "id": 46,
+    "image_name": "Dining.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 59503,
+    "created_at": "2026-08-13 16:46:51",
+    "updated_at": "2026-08-13 16:46:51"
+  },
+  {
+    "id": 47,
+    "image_name": "Dining.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 59503,
+    "created_at": "2026-08-13 16:46:51",
+    "updated_at": "2026-08-13 16:46:51"
+  },
+  {
+    "id": 48,
+    "image_name": "Dining.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 59503,
+    "created_at": "2026-08-13 17:02:17",
+    "updated_at": "2026-08-13 17:02:17"
+  },
+  {
+    "id": 49,
+    "image_name": "Dining.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 59503,
+    "created_at": "2026-08-13 17:02:17",
+    "updated_at": "2026-08-13 17:02:17"
+  },
+  {
+    "id": 50,
+    "image_name": "home-furnishing.png",
+    "image_type": "image/png",
+    "image_size": 1874086,
+    "created_at": "2026-08-13 17:48:09",
+    "updated_at": "2026-08-13 17:48:09"
+  },
+  {
+    "id": 51,
+    "image_name": "OIP.webp",
+    "image_type": "image/webp",
+    "image_size": 5256,
+    "created_at": "2026-08-13 17:50:05",
+    "updated_at": "2026-08-13 17:50:05"
+  },
+  {
+    "id": 52,
+    "image_name": "OIP.webp",
+    "image_type": "image/webp",
+    "image_size": 5256,
+    "created_at": "2026-08-17 11:23:58",
+    "updated_at": "2026-08-17 11:23:58"
+  },
+  {
+    "id": 53,
+    "image_name": "img2.png",
+    "image_type": "image/png",
+    "image_size": 2041533,
+    "created_at": "2026-08-17 11:46:01",
+    "updated_at": "2026-08-17 11:46:01"
+  },
+  {
+    "id": 54,
+    "image_name": "img2.png",
+    "image_type": "image/png",
+    "image_size": 2041533,
+    "created_at": "2026-08-19 10:31:27",
+    "updated_at": "2026-08-19 10:31:27"
+  },
+  {
+    "id": 55,
+    "image_name": "Screenshot_2026-08-12_153307.png",
+    "image_type": "image/png",
+    "image_size": 840377,
+    "created_at": "2026-08-21 14:56:12",
+    "updated_at": "2026-08-21 14:56:12"
+  },
+  {
+    "id": 56,
+    "image_name": "logo.jpeg",
+    "image_type": "image/jpeg",
+    "image_size": 52675,
+    "created_at": "2026-08-21 14:56:55",
+    "updated_at": "2026-08-21 14:56:55"
+  },
+  {
+    "id": 57,
+    "image_name": "Beds.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 51518,
+    "created_at": "2026-08-22 10:56:56",
+    "updated_at": "2026-08-22 10:56:56"
+  },
+  {
+    "id": 58,
+    "image_name": "OIP.webp",
+    "image_type": "image/webp",
+    "image_size": 5256,
+    "created_at": "2026-08-22 16:20:03",
+    "updated_at": "2026-08-22 16:20:03"
+  },
+  {
+    "id": 59,
+    "image_name": "OIP.webp",
+    "image_type": "image/webp",
+    "image_size": 5256,
+    "created_at": "2026-08-22 16:32:35",
+    "updated_at": "2026-08-22 16:32:35"
+  },
+  {
+    "id": 60,
+    "image_name": "coffee-tables.webp",
+    "image_type": "image/webp",
+    "image_size": 66908,
+    "created_at": "2026-08-22 16:33:19",
+    "updated_at": "2026-08-22 16:33:19"
+  },
+  {
+    "id": 61,
+    "image_name": "coffee-tables.webp",
+    "image_type": "image/webp",
+    "image_size": 66908,
+    "created_at": "2026-08-22 16:36:44",
+    "updated_at": "2026-08-22 16:36:44"
+  },
+  {
+    "id": 62,
+    "image_name": "coffee-tables.webp",
+    "image_type": "image/webp",
+    "image_size": 66908,
+    "created_at": "2026-08-22 16:37:35",
+    "updated_at": "2026-08-22 16:37:35"
+  },
+  {
+    "id": 63,
+    "image_name": "cream1.webp",
+    "image_type": "image/webp",
+    "image_size": 177454,
+    "created_at": "2026-08-22 16:38:00",
+    "updated_at": "2026-08-22 16:38:00"
+  },
+  {
+    "id": 64,
+    "image_name": "cream3.webp",
+    "image_type": "image/webp",
+    "image_size": 102588,
+    "created_at": "2026-08-22 16:38:00",
+    "updated_at": "2026-08-22 16:38:00"
+  },
+  {
+    "id": 65,
+    "image_name": "cream4.webp",
+    "image_type": "image/webp",
+    "image_size": 172560,
+    "created_at": "2026-08-22 16:38:00",
+    "updated_at": "2026-08-22 16:38:00"
+  },
+  {
+    "id": 66,
+    "image_name": "cream1.webp",
+    "image_type": "image/webp",
+    "image_size": 177454,
+    "created_at": "2026-08-22 16:38:04",
+    "updated_at": "2026-08-22 16:38:04"
+  },
+  {
+    "id": 67,
+    "image_name": "cream3.webp",
+    "image_type": "image/webp",
+    "image_size": 102588,
+    "created_at": "2026-08-22 16:38:04",
+    "updated_at": "2026-08-22 16:38:04"
+  },
+  {
+    "id": 68,
+    "image_name": "cream4.webp",
+    "image_type": "image/webp",
+    "image_size": 172560,
+    "created_at": "2026-08-22 16:38:04",
+    "updated_at": "2026-08-22 16:38:04"
+  },
+  {
+    "id": 69,
+    "image_name": "grey.webp",
+    "image_type": "image/webp",
+    "image_size": 192502,
+    "created_at": "2026-08-22 16:41:42",
+    "updated_at": "2026-08-22 16:41:42"
+  },
+  {
+    "id": 70,
+    "image_name": "grey4.webp",
+    "image_type": "image/webp",
+    "image_size": 182982,
+    "created_at": "2026-08-22 16:41:42",
+    "updated_at": "2026-08-22 16:41:42"
+  },
+  {
+    "id": 71,
+    "image_name": "grey.webp",
+    "image_type": "image/webp",
+    "image_size": 192502,
+    "created_at": "2026-08-22 16:46:15",
+    "updated_at": "2026-08-22 16:46:15"
+  },
+  {
+    "id": 72,
+    "image_name": "grey1.webp",
+    "image_type": "image/webp",
+    "image_size": 148704,
+    "created_at": "2026-08-22 16:46:15",
+    "updated_at": "2026-08-22 16:46:15"
+  },
+  {
+    "id": 73,
+    "image_name": "grey3.webp",
+    "image_type": "image/webp",
+    "image_size": 455020,
+    "created_at": "2026-08-22 16:46:15",
+    "updated_at": "2026-08-22 16:46:15"
+  },
+  {
+    "id": 74,
+    "image_name": "grey4.webp",
+    "image_type": "image/webp",
+    "image_size": 182982,
+    "created_at": "2026-08-22 16:46:15",
+    "updated_at": "2026-08-22 16:46:15"
+  },
+  {
+    "id": 75,
+    "image_name": "cream1.webp",
+    "image_type": "image/webp",
+    "image_size": 177454,
+    "created_at": "2026-08-22 16:46:15",
+    "updated_at": "2026-08-22 16:46:15"
+  },
+  {
+    "id": 76,
+    "image_name": "cream4.webp",
+    "image_type": "image/webp",
+    "image_size": 172560,
+    "created_at": "2026-08-22 16:46:15",
+    "updated_at": "2026-08-22 16:46:15"
+  },
+  {
+    "id": 77,
+    "image_name": "dining1.webp",
+    "image_type": "image/webp",
+    "image_size": 312606,
+    "created_at": "2026-08-22 16:57:28",
+    "updated_at": "2026-08-22 16:57:28"
+  },
+  {
+    "id": 78,
+    "image_name": "dining2.webp",
+    "image_type": "image/webp",
+    "image_size": 130866,
+    "created_at": "2026-08-22 16:57:28",
+    "updated_at": "2026-08-22 16:57:28"
+  },
+  {
+    "id": 79,
+    "image_name": "diing3.webp",
+    "image_type": "image/webp",
+    "image_size": 147948,
+    "created_at": "2026-08-22 16:57:28",
+    "updated_at": "2026-08-22 16:57:28"
+  },
+  {
+    "id": 80,
+    "image_name": "dining4.webp",
+    "image_type": "image/webp",
+    "image_size": 114284,
+    "created_at": "2026-08-22 16:57:28",
+    "updated_at": "2026-08-22 16:57:28"
+  },
+  {
+    "id": 81,
+    "image_name": "qulty.webp",
+    "image_type": "image/webp",
+    "image_size": 78390,
+    "created_at": "2026-08-22 16:57:28",
+    "updated_at": "2026-08-22 16:57:28"
+  },
+  {
+    "id": 82,
+    "image_name": "dining1.webp",
+    "image_type": "image/webp",
+    "image_size": 312606,
+    "created_at": "2026-08-22 17:01:24",
+    "updated_at": "2026-08-22 17:01:24"
+  },
+  {
+    "id": 83,
+    "image_name": "dining1.webp",
+    "image_type": "image/webp",
+    "image_size": 312606,
+    "created_at": "2026-08-22 17:01:24",
+    "updated_at": "2026-08-22 17:01:24"
+  },
+  {
+    "id": 84,
+    "image_name": "D1.webp",
+    "image_type": "image/webp",
+    "image_size": 119840,
+    "created_at": "2026-08-22 17:04:46",
+    "updated_at": "2026-08-22 17:04:46"
+  },
+  {
+    "id": 85,
+    "image_name": "qulty.webp",
+    "image_type": "image/webp",
+    "image_size": 78390,
+    "created_at": "2026-08-22 17:04:46",
+    "updated_at": "2026-08-22 17:04:46"
+  },
+  {
+    "id": 86,
+    "image_name": "qulty.webp",
+    "image_type": "image/webp",
+    "image_size": 78390,
+    "created_at": "2026-08-22 17:06:02",
+    "updated_at": "2026-08-22 17:06:02"
+  },
+  {
+    "id": 87,
+    "image_name": "D5.webp",
+    "image_type": "image/webp",
+    "image_size": 43434,
+    "created_at": "2026-08-22 17:07:11",
+    "updated_at": "2026-08-22 17:07:11"
+  },
+  {
+    "id": 88,
+    "image_name": "qulty.webp",
+    "image_type": "image/webp",
+    "image_size": 78390,
+    "created_at": "2026-08-22 17:08:10",
+    "updated_at": "2026-08-22 17:08:10"
+  },
+  {
+    "id": 89,
+    "image_name": "D3.webp",
+    "image_type": "image/webp",
+    "image_size": 135878,
+    "created_at": "2026-08-22 17:08:55",
+    "updated_at": "2026-08-22 17:08:55"
+  },
+  {
+    "id": 90,
+    "image_name": "D4.webp",
+    "image_type": "image/webp",
+    "image_size": 47150,
+    "created_at": "2026-08-22 17:09:52",
+    "updated_at": "2026-08-22 17:09:52"
+  },
+  {
+    "id": 91,
+    "image_name": "D1.webp",
+    "image_type": "image/webp",
+    "image_size": 119840,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 92,
+    "image_name": "D2.webp",
+    "image_type": "image/webp",
+    "image_size": 92966,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 93,
+    "image_name": "D3.webp",
+    "image_type": "image/webp",
+    "image_size": 135878,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 94,
+    "image_name": "D4.webp",
+    "image_type": "image/webp",
+    "image_size": 47150,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 95,
+    "image_name": "D5.webp",
+    "image_type": "image/webp",
+    "image_size": 43434,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 96,
+    "image_name": "dining1.webp",
+    "image_type": "image/webp",
+    "image_size": 312606,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 97,
+    "image_name": "qulty.webp",
+    "image_type": "image/webp",
+    "image_size": 78390,
+    "created_at": "2026-08-22 17:16:33",
+    "updated_at": "2026-08-22 17:16:33"
+  },
+  {
+    "id": 98,
+    "image_name": "out1.webp",
+    "image_type": "image/webp",
+    "image_size": 248576,
+    "created_at": "2026-08-22 17:31:26",
+    "updated_at": "2026-08-22 17:31:26"
+  },
+  {
+    "id": 99,
+    "image_name": "out2.webp",
+    "image_type": "image/webp",
+    "image_size": 179356,
+    "created_at": "2026-08-22 17:31:26",
+    "updated_at": "2026-08-22 17:31:26"
+  },
+  {
+    "id": 100,
+    "image_name": "out3.webp",
+    "image_type": "image/webp",
+    "image_size": 119100,
+    "created_at": "2026-08-22 17:31:26",
+    "updated_at": "2026-08-22 17:31:26"
+  },
+  {
+    "id": 101,
+    "image_name": "out4.webp",
+    "image_type": "image/webp",
+    "image_size": 259194,
+    "created_at": "2026-08-22 17:31:26",
+    "updated_at": "2026-08-22 17:31:26"
+  },
+  {
+    "id": 102,
+    "image_name": "out01.webp",
+    "image_type": "image/webp",
+    "image_size": 192816,
+    "created_at": "2026-08-22 17:31:26",
+    "updated_at": "2026-08-22 17:31:26"
+  },
+  {
+    "id": 103,
+    "image_name": "out04.webp",
+    "image_type": "image/webp",
+    "image_size": 290514,
+    "created_at": "2026-08-22 17:31:26",
+    "updated_at": "2026-08-22 17:31:26"
+  },
+  {
+    "id": 104,
+    "image_name": "out04.webp",
+    "image_type": "image/webp",
+    "image_size": 290514,
+    "created_at": "2026-08-22 17:32:34",
+    "updated_at": "2026-08-22 17:32:34"
+  },
+  {
+    "id": 105,
+    "image_name": "out2.webp",
+    "image_type": "image/webp",
+    "image_size": 179356,
+    "created_at": "2026-08-22 17:34:03",
+    "updated_at": "2026-08-22 17:34:03"
+  },
+  {
+    "id": 106,
+    "image_name": "out3.webp",
+    "image_type": "image/webp",
+    "image_size": 119100,
+    "created_at": "2026-08-22 17:34:04",
+    "updated_at": "2026-08-22 17:34:04"
+  },
+  {
+    "id": 107,
+    "image_name": "out4.webp",
+    "image_type": "image/webp",
+    "image_size": 259194,
+    "created_at": "2026-08-22 17:34:04",
+    "updated_at": "2026-08-22 17:34:04"
+  },
+  {
+    "id": 108,
+    "image_name": "out02.webp",
+    "image_type": "image/webp",
+    "image_size": 218630,
+    "created_at": "2026-08-22 17:35:10",
+    "updated_at": "2026-08-22 17:35:10"
+  },
+  {
+    "id": 109,
+    "image_name": "out02.webp",
+    "image_type": "image/webp",
+    "image_size": 218630,
+    "created_at": "2026-08-22 17:35:14",
+    "updated_at": "2026-08-22 17:35:14"
+  },
+  {
+    "id": 110,
+    "image_name": "out03.webp",
+    "image_type": "image/webp",
+    "image_size": 131134,
+    "created_at": "2026-08-22 17:35:45",
+    "updated_at": "2026-08-22 17:35:45"
+  },
+  {
+    "id": 111,
+    "image_name": "out03.webp",
+    "image_type": "image/webp",
+    "image_size": 131134,
+    "created_at": "2026-08-22 17:35:50",
+    "updated_at": "2026-08-22 17:35:50"
+  },
+  {
+    "id": 112,
+    "image_name": "out01.webp",
+    "image_type": "image/webp",
+    "image_size": 192816,
+    "created_at": "2026-08-22 17:42:17",
+    "updated_at": "2026-08-22 17:42:17"
+  },
+  {
+    "id": 113,
+    "image_name": "out02.webp",
+    "image_type": "image/webp",
+    "image_size": 218630,
+    "created_at": "2026-08-22 17:42:17",
+    "updated_at": "2026-08-22 17:42:17"
+  },
+  {
+    "id": 114,
+    "image_name": "out03.webp",
+    "image_type": "image/webp",
+    "image_size": 131134,
+    "created_at": "2026-08-22 17:42:17",
+    "updated_at": "2026-08-22 17:42:17"
+  },
+  {
+    "id": 115,
+    "image_name": "out04.webp",
+    "image_type": "image/webp",
+    "image_size": 290514,
+    "created_at": "2026-08-22 17:42:17",
+    "updated_at": "2026-08-22 17:42:17"
+  },
+  {
+    "id": 116,
+    "image_name": "out1.webp",
+    "image_type": "image/webp",
+    "image_size": 248576,
+    "created_at": "2026-08-22 17:42:17",
+    "updated_at": "2026-08-22 17:42:17"
+  },
+  {
+    "id": 117,
+    "image_name": "out4.webp",
+    "image_type": "image/webp",
+    "image_size": 259194,
+    "created_at": "2026-08-22 17:42:17",
+    "updated_at": "2026-08-22 17:42:17"
+  },
+  {
+    "id": 118,
+    "image_name": "out2.webp",
+    "image_type": "image/webp",
+    "image_size": 179356,
+    "created_at": "2026-08-22 17:45:09",
+    "updated_at": "2026-08-22 17:45:09"
+  },
+  {
+    "id": 119,
+    "image_name": "out3.webp",
+    "image_type": "image/webp",
+    "image_size": 119100,
+    "created_at": "2026-08-22 17:45:09",
+    "updated_at": "2026-08-22 17:45:09"
+  },
+  {
+    "id": 120,
+    "image_name": "out4.webp",
+    "image_type": "image/webp",
+    "image_size": 259194,
+    "created_at": "2026-08-22 17:45:09",
+    "updated_at": "2026-08-22 17:45:09"
+  },
+  {
+    "id": 121,
+    "image_name": "out2.webp",
+    "image_type": "image/webp",
+    "image_size": 179356,
+    "created_at": "2026-08-22 17:45:13",
+    "updated_at": "2026-08-22 17:45:13"
+  },
+  {
+    "id": 122,
+    "image_name": "out3.webp",
+    "image_type": "image/webp",
+    "image_size": 119100,
+    "created_at": "2026-08-22 17:45:13",
+    "updated_at": "2026-08-22 17:45:13"
+  },
+  {
+    "id": 123,
+    "image_name": "out4.webp",
+    "image_type": "image/webp",
+    "image_size": 259194,
+    "created_at": "2026-08-22 17:45:13",
+    "updated_at": "2026-08-22 17:45:13"
+  },
+  {
+    "id": 124,
+    "image_name": "out02.webp",
+    "image_type": "image/webp",
+    "image_size": 218630,
+    "created_at": "2026-08-22 17:46:27",
+    "updated_at": "2026-08-22 17:46:27"
+  },
+  {
+    "id": 125,
+    "image_name": "out03.webp",
+    "image_type": "image/webp",
+    "image_size": 131134,
+    "created_at": "2026-08-22 17:46:27",
+    "updated_at": "2026-08-22 17:46:27"
+  },
+  {
+    "id": 126,
+    "image_name": "out04.webp",
+    "image_type": "image/webp",
+    "image_size": 290514,
+    "created_at": "2026-08-22 17:46:27",
+    "updated_at": "2026-08-22 17:46:27"
+  },
+  {
+    "id": 127,
+    "image_name": "bed1.webp",
+    "image_type": "image/webp",
+    "image_size": 111212,
+    "created_at": "2026-08-22 17:58:10",
+    "updated_at": "2026-08-22 17:58:10"
+  },
+  {
+    "id": 128,
+    "image_name": "bed2.webp",
+    "image_type": "image/webp",
+    "image_size": 18230,
+    "created_at": "2026-08-22 17:58:10",
+    "updated_at": "2026-08-22 17:58:10"
+  },
+  {
+    "id": 129,
+    "image_name": "bed3.webp",
+    "image_type": "image/webp",
+    "image_size": 27804,
+    "created_at": "2026-08-22 17:58:10",
+    "updated_at": "2026-08-22 17:58:10"
+  },
+  {
+    "id": 130,
+    "image_name": "bed4.webp",
+    "image_type": "image/webp",
+    "image_size": 41348,
+    "created_at": "2026-08-22 17:58:10",
+    "updated_at": "2026-08-22 17:58:10"
+  },
+  {
+    "id": 131,
+    "image_name": "bed1.webp",
+    "image_type": "image/webp",
+    "image_size": 111212,
+    "created_at": "2026-08-22 17:58:10",
+    "updated_at": "2026-08-22 17:58:10"
+  },
+  {
+    "id": 132,
+    "image_name": "bed01.webp",
+    "image_type": "image/webp",
+    "image_size": 157808,
+    "created_at": "2026-08-22 18:04:21",
+    "updated_at": "2026-08-22 18:04:21"
+  },
+  {
+    "id": 133,
+    "image_name": "bed02.webp",
+    "image_type": "image/webp",
+    "image_size": 54002,
+    "created_at": "2026-08-22 18:04:21",
+    "updated_at": "2026-08-22 18:04:21"
+  },
+  {
+    "id": 134,
+    "image_name": "bed03.webp",
+    "image_type": "image/webp",
+    "image_size": 44612,
+    "created_at": "2026-08-22 18:04:21",
+    "updated_at": "2026-08-22 18:04:21"
+  },
+  {
+    "id": 135,
+    "image_name": "bed04.webp",
+    "image_type": "image/webp",
+    "image_size": 89284,
+    "created_at": "2026-08-22 18:04:21",
+    "updated_at": "2026-08-22 18:04:21"
+  },
+  {
+    "id": 136,
+    "image_name": "bed05.webp",
+    "image_type": "image/webp",
+    "image_size": 107712,
+    "created_at": "2026-08-22 18:04:21",
+    "updated_at": "2026-08-22 18:04:21"
+  },
+  {
+    "id": 137,
+    "image_name": "door1.webp",
+    "image_type": "image/webp",
+    "image_size": 236240,
+    "created_at": "2026-08-22 18:16:07",
+    "updated_at": "2026-08-22 18:16:07"
+  },
+  {
+    "id": 138,
+    "image_name": "door1.webp",
+    "image_type": "image/webp",
+    "image_size": 236240,
+    "created_at": "2026-08-22 18:16:07",
+    "updated_at": "2026-08-22 18:16:07"
+  },
+  {
+    "id": 139,
+    "image_name": "play2.webp",
+    "image_type": "image/webp",
+    "image_size": 87856,
+    "created_at": "2026-08-22 18:17:20",
+    "updated_at": "2026-08-22 18:17:20"
+  },
+  {
+    "id": 140,
+    "image_name": "play2.webp",
+    "image_type": "image/webp",
+    "image_size": 87856,
+    "created_at": "2026-08-22 18:17:20",
+    "updated_at": "2026-08-22 18:17:20"
+  },
+  {
+    "id": 141,
+    "image_name": "door1.webp",
+    "image_type": "image/webp",
+    "image_size": 236240,
+    "created_at": "2026-08-22 18:19:32",
+    "updated_at": "2026-08-22 18:19:32"
+  },
+  {
+    "id": 142,
+    "image_name": "door2.webp",
+    "image_type": "image/webp",
+    "image_size": 173936,
+    "created_at": "2026-08-22 18:19:32",
+    "updated_at": "2026-08-22 18:19:32"
+  },
+  {
+    "id": 143,
+    "image_name": "door3.webp",
+    "image_type": "image/webp",
+    "image_size": 139744,
+    "created_at": "2026-08-22 18:19:32",
+    "updated_at": "2026-08-22 18:19:32"
+  },
+  {
+    "id": 144,
+    "image_name": "door1.webp",
+    "image_type": "image/webp",
+    "image_size": 236240,
+    "created_at": "2026-08-22 18:19:32",
+    "updated_at": "2026-08-22 18:19:32"
+  },
+  {
+    "id": 145,
+    "image_name": "play1.webp",
+    "image_type": "image/webp",
+    "image_size": 54982,
+    "created_at": "2026-08-22 18:21:53",
+    "updated_at": "2026-08-22 18:21:53"
+  },
+  {
+    "id": 146,
+    "image_name": "play2.webp",
+    "image_type": "image/webp",
+    "image_size": 87856,
+    "created_at": "2026-08-22 18:21:53",
+    "updated_at": "2026-08-22 18:21:53"
+  },
+  {
+    "id": 147,
+    "image_name": "living.webp",
+    "image_type": "image/webp",
+    "image_size": 25326,
+    "created_at": "2026-08-22 18:25:20",
+    "updated_at": "2026-08-22 18:25:20"
+  },
+  {
+    "id": 148,
+    "image_name": "living.webp",
+    "image_type": "image/webp",
+    "image_size": 25326,
+    "created_at": "2026-08-22 18:25:20",
+    "updated_at": "2026-08-22 18:25:20"
+  },
+  {
+    "id": 149,
+    "image_name": "DD.png",
+    "image_type": "image/png",
+    "image_size": 821384,
+    "created_at": "2026-09-10 14:34:18",
+    "updated_at": "2026-09-10 14:34:18"
+  },
+  {
+    "id": 150,
+    "image_name": "sofa_123.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 36648,
+    "created_at": "2026-09-15 18:45:47",
+    "updated_at": "2026-09-15 18:45:47"
+  },
+  {
+    "id": 151,
+    "image_name": "sofa_123.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 36648,
+    "created_at": "2026-09-15 18:45:50",
+    "updated_at": "2026-09-15 18:45:50"
+  },
+  {
+    "id": 152,
+    "image_name": "four_seater.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 36055,
+    "created_at": "2026-09-15 18:47:38",
+    "updated_at": "2026-09-15 18:47:38"
+  },
+  {
+    "id": 153,
+    "image_name": "four_seater.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 36055,
+    "created_at": "2026-09-16 16:16:02",
+    "updated_at": "2026-09-16 16:16:02"
+  },
+  {
+    "id": 154,
+    "image_name": "shoe_rack.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 604272,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 155,
+    "image_name": "wardrobe.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 609440,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 156,
+    "image_name": "bookshelf.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 595280,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 157,
+    "image_name": "rugs.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 642525,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 158,
+    "image_name": "cushions.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 565474,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 159,
+    "image_name": "accent_chair.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 667712,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 160,
+    "image_name": "nightstand.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 651759,
+    "created_at": "2026-09-18 14:29:05",
+    "updated_at": "2026-09-18 14:29:05"
+  },
+  {
+    "id": 161,
+    "image_name": "re.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 94123,
+    "created_at": "2026-09-19 11:59:59",
+    "updated_at": "2026-09-19 11:59:59"
+  },
+  {
+    "id": 162,
+    "image_name": "chair.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 103175,
+    "created_at": "2026-09-19 12:00:24",
+    "updated_at": "2026-09-19 12:00:24"
+  },
+  {
+    "id": 163,
+    "image_name": "office.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 32294,
+    "created_at": "2026-09-19 12:01:15",
+    "updated_at": "2026-09-19 12:01:15"
+  },
+  {
+    "id": 164,
+    "image_name": "Bookshelves.jpg",
+    "image_type": "image/jpeg",
+    "image_size": 83088,
+    "created_at": "2026-09-19 12:04:52",
+    "updated_at": "2026-09-19 12:04:52"
+  }
+]

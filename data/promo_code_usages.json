@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "promo_code_id": 17,
+    "promo_code": "CHERRY1319",
+    "user_id": null,
+    "customer_email": "raj@gmail.com",
+    "customer_phone": "9391478220",
+    "order_id": null,
+    "enquiry_id": 117,
+    "discount_amount": 388.69,
+    "used_at": "2026-08-26 12:17:38"
+  },
+  {
+    "id": 3,
+    "promo_code_id": 15,
+    "promo_code": "WELCOMEIS",
+    "user_id": 12,
+    "customer_email": "saiakhilpotnuru@gmail.com",
+    "customer_phone": "9347750075",
+    "order_id": null,
+    "enquiry_id": 118,
+    "discount_amount": 1000.0,
+    "used_at": "2026-08-26 15:52:34"
+  },
+  {
+    "id": 4,
+    "promo_code_id": 18,
+    "promo_code": "SIVA1233",
+    "user_id": null,
+    "customer_email": "charanpanda225@gmail.com",
+    "customer_phone": "345698765",
+    "order_id": null,
+    "enquiry_id": 125,
+    "discount_amount": 3294.13,
+    "used_at": "2026-09-08 18:14:20"
+  }
+]

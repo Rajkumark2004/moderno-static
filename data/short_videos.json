@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Larsson Study Table",
+    "video_url": "uploads/videos/reel_1.mp4",
+    "thumbnail_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=800&auto=format&fit=crop",
+    "product_link": "shop?category=study",
+    "view_count": "2.8M",
+    "like_count": "291",
+    "display_order": 1,
+    "is_active": 1,
+    "created_at": "2026-09-18 12:47:47"
+  },
+  {
+    "id": 2,
+    "title": "Hanoi Solid Wood Cane Hydraulic Storage Bed",
+    "video_url": "uploads/videos/reel_2.mp4",
+    "thumbnail_url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop",
+    "product_link": "shop?category=beds",
+    "view_count": "222.6K",
+    "like_count": "288",
+    "display_order": 2,
+    "is_active": 1,
+    "created_at": "2026-09-18 12:47:47"
+  },
+  {
+    "id": 3,
+    "title": "Bennis Shoe Rack",
+    "video_url": "uploads/videos/reel_1.mp4",
+    "thumbnail_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
+    "product_link": "shop?category=storage",
+    "view_count": "66.5K",
+    "like_count": "129",
+    "display_order": 3,
+    "is_active": 1,
+    "created_at": "2026-09-18 12:47:47"
+  },
+  {
+    "id": 4,
+    "title": "Holmebrook Queen Size Upholstered Bed",
+    "video_url": "uploads/videos/reel_2.mp4",
+    "thumbnail_url": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=800&auto=format&fit=crop",
+    "product_link": "shop?category=beds",
+    "view_count": "28.8K",
+    "like_count": "80",
+    "display_order": 4,
+    "is_active": 1,
+    "created_at": "2026-09-18 12:47:47"
+  },
+  {
+    "id": 5,
+    "title": "Nina Dressing Table",
+    "video_url": "uploads/videos/reel_2.mp4",
+    "thumbnail_url": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=800&auto=format&fit=crop",
+    "product_link": "shop?category=storage",
+    "view_count": "126.3K",
+    "like_count": "54",
+    "display_order": 5,
+    "is_active": 1,
+    "created_at": "2026-09-18 12:47:47"
+  }
+]

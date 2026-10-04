@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "city": "Hyderabad",
+    "name": "Moderno - Hyderabad Experience Center",
+    "address": "Road No. 36, Jubilee Hills, Near Peddamma Temple Metro Station, Hyderabad, Telangana 500033",
+    "timing": "10:30 AM - 9:00 PM (Open all 7 days)",
+    "phone": "+91 99901 23999 / 040 2355 8822",
+    "map_url": "https://maps.google.com/?q=Moderno+Furniture+Hyderabad",
+    "image_url": "images/hyderabad_showroom.jpg",
+    "amenities": "Flagship Telangana Showroom, Over 12,000 sq.ft. Luxury Display, Custom Built Furniture Studio",
+    "display_order": 0,
+    "is_active": 1,
+    "created_at": "2026-08-21 16:38:24"
+  }
+]

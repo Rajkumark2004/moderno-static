@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "code": "demo_gateway",
+    "name": "Demo Online Payment (Card / UPI / NetBanking)",
+    "type": "Online Payment (Demo)",
+    "status": 1,
+    "mode": "",
+    "description": "Simulate instant online payments via UPI, Credit/Debit Cards & Net Banking for demonstration.",
+    "configuration": "{\"mode\":\"Demo Mode\",\"provider\":\"MODERNO Simulator\"}",
+    "sort_order": 1,
+    "created_at": "2026-08-14 12:37:50",
+    "updated_at": "2026-10-03 11:10:25"
+  },
+  {
+    "id": 2,
+    "code": "cod",
+    "name": "Cash on Delivery",
+    "type": "COD",
+    "status": 1,
+    "mode": "Test",
+    "description": "Pay when your order is delivered at your doorstep.",
+    "configuration": "{\"extra_fee\":0,\"instructions\":\"Pay cash or scan UPI QR code upon home delivery & installation.\"}",
+    "sort_order": 2,
+    "created_at": "2026-08-14 12:37:50",
+    "updated_at": "2026-08-22 12:32:48"
+  }
+]

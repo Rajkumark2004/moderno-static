@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - MODERNO Luxury Furniture</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        /* ── Main Login Container ── */
+        .login-container {
+            display: flex;
+            width: 100%;
+            max-width: 960px;
+            min-height: 520px;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+        }
+
+        /* ── LEFT PANEL – Illustration ── */
+        .login-left {
+            flex: 1.1;
+            background: #f4f6fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-left::before {
+            content: '';
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            background: radial-gradient(circle, rgba(100, 210, 220, 0.18) 0%, transparent 70%);
+            top: -60px;
+            left: -80px;
+            pointer-events: none;
+        }
+
+        .login-left::after {
+            content: '';
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(120, 80, 200, 0.10) 0%, transparent 70%);
+            bottom: -40px;
+            right: -40px;
+            pointer-events: none;
+        }
+
+        .illustration-img {
+            width: 100%;
+            max-width: 460px;
+            height: auto;
+            position: relative;
+            z-index: 1;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50%       { transform: translateY(-10px); }
+        }
+
+        /* ── RIGHT PANEL – Form ── */
+        .login-right {
+            flex: 0 0 380px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2.75rem 2.5rem;
+            border-left: 1px solid #eef0f5;
+        }
+
+        /* Brand */
+        .brand-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .brand-logo-link {
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .brand-logo-link img {
+            height: 62px;
+            width: auto;
+            display: block;
+        }
+
+        .brand-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            letter-spacing: 0.06em;
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            color: #64748b;
+            margin-top: 3px;
+        }
+
+        .brand-sub::before,
+        .brand-sub::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 28px;
+            background: #cbd5e1;
+        }
+
+        .login-tagline {
+            font-size: 0.875rem;
+            color: #475569;
+            margin-top: 0.6rem;
+        }
+
+        /* Alert */
+        .alert-error {
+            width: 100%;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 0.65rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Form */
+        .login-form {
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            height: 46px;
+            padding: 0 3rem 0 1rem;
+            font-size: 0.875rem;
+            font-family: inherit;
+            border: 1.5px solid #dde1ea;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #1a1a2e;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+
+        .form-control::placeholder {
+            color: #b0b8c9;
+        }
+
+        .form-control:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.10);
+        }
+
+        .input-icon-right {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+
+        .toggle-password-btn {
+            position: absolute;
+            right: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            padding: 0.25rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+
+        .toggle-password-btn:hover {
+            color: #7c3aed;
+        }
+
+        /* Remember & Forgot row */
+        .form-meta-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .remember-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.8125rem;
+            color: #64748b;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .remember-wrap input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            accent-color: #7c3aed;
+            cursor: pointer;
+        }
+
+        .forgot-link {
+            font-size: 0.8125rem;
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .forgot-link:hover {
+            color: #5b21b6;
+            text-decoration: underline;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            width: 100%;
+            height: 46px;
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 18px rgba(124, 58, 237, 0.35);
+            transition: all 0.25s ease;
+        }
+
+        .btn-submit:hover {
+            background: linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%);
+            box-shadow: 0 6px 22px rgba(124, 58, 237, 0.45);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        /* Back link */
+        .back-to-store {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+
+        .back-to-store a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-to-store a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                max-width: 420px;
+            }
+
+            .login-left {
+                padding: 2rem 1.5rem 1rem;
+                min-height: 220px;
+            }
+
+            .illustration-img {
+                max-width: 280px;
+            }
+
+            .login-right {
+                flex: none;
+                padding: 2rem 1.75rem 2.25rem;
+                border-left: none;
+                border-top: 1px solid #eef0f5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+
+        <!-- LEFT: Illustration panel -->
+        <div class="login-left">
+            <img
+                src="../images/login_illustration.png"
+                alt="E-Commerce Admin Dashboard Illustration"
+                class="illustration-img"
+                onerror="this.style.display='none'"
+            >
+        </div>
+
+        <!-- RIGHT: Login form -->
+        <div class="login-right">
+
+            <!-- Brand -->
+            <div class="brand-wrap">
+                <a href="../index" class="brand-logo-link" title="MODERNO Home">
+                    <img onerror="window.handleImageError(this)" src="../images/logo.svg" alt="MODERNO Logo">
+                </a>
+                <div class="brand-title">MODERNO</div>
+                <div class="brand-sub">LUXURY FURNITURE</div>
+                <p class="login-tagline">Sign in to start your session</p>
+            </div>
+
+            <!-- Error alert -->
+            
+            <!-- Form -->
+            <form method="POST" action="login" class="login-form">
+
+                <!-- Username -->
+                <div class="form-group">
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control"
+                        placeholder="Mobile / Username / Email"
+                        required
+                        autofocus
+                        value=""
+                    >
+                    <span class="input-icon-right">
+                        <i class="fa-regular fa-user"></i>
+                    </span>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Password"
+                        required
+                    >
+                    <button type="button" class="toggle-password-btn" onclick="togglePassword()" aria-label="Toggle password">
+                        <i class="fa-regular fa-eye" id="toggleIcon"></i>
+                    </button>
+                </div>
+
+                <!-- Remember me & Forgot -->
+                <div class="form-meta-row">
+                    <label class="remember-wrap">
+                        <input type="checkbox" name="remember" id="rememberMe">
+                        Remember Me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot Password ?</a>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-submit" id="signInBtn">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="back-to-store">
+                <a href="../index"><i class="fa-solid fa-arrow-left"></i> Back to Moderno Store</a>
+            </div>
+
+        </div><!-- /.login-right -->
+    </div><!-- /.login-container -->
+
+    <script>
+        function togglePassword() {
+            const pwd  = document.getElementById('password');
+            const icon = document.getElementById('toggleIcon');
+            if (pwd.type === 'password') {
+                pwd.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                pwd.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+    </script>
+<script src="../js/static_app.js"></script>
+</body>
+</html>

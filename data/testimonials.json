@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "author": "Utkarsh Kumar",
+    "city": "Bangalore",
+    "rating": 5,
+    "tag": "Verified Buyer",
+    "product_purchased": "Albatross 3+2 Luxury Fabric Sofa Set",
+    "review_text": "I ordered L shape sofa from here, it was good experience there and the quality also looks good, Rekha had helped me through out all the process till the delivery.",
+    "image_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "display_order": 1,
+    "is_active": 0,
+    "created_at": "2026-08-27 16:48:16",
+    "updated_at": "2026-08-27 17:00:38"
+  },
+  {
+    "id": 2,
+    "author": "Monisha Krishnamoorthy",
+    "city": "Bangalore",
+    "rating": 5,
+    "tag": "Verified Buyer",
+    "product_purchased": "Royale Solid Sheesham 6-Seater Dining Set",
+    "review_text": "We got our living room furnitures from this store and it's the best. Mr. Murali is the one we dealt with. He is very professional, polite, helpful and suggests the apt ones. Customers can blindly walk in to the store and definitely they ll be satisfied.",
+    "image_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+    "display_order": 2,
+    "is_active": 1,
+    "created_at": "2026-08-27 16:48:16",
+    "updated_at": "2026-08-27 16:48:16"
+  },
+  {
+    "id": 3,
+    "author": "Kavuri Sri Lakshmi Chitra",
+    "city": "Bangalore",
+    "rating": 5,
+    "tag": "",
+    "product_purchased": "Nordic Modern Wall-Mounted TV Unit",
+    "review_text": "We have casually visited showroom when it was newly opened to find dining table options but found so many varities for it and we ended up purchasing it. Staff is really friendly and patient while discussing with Mr. Natarajan helped us in the selection.",
+    "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    "display_order": 3,
+    "is_active": 1,
+    "created_at": "2026-08-27 16:48:16",
+    "updated_at": "2026-08-27 17:35:54"
+  },
+  {
+    "id": 4,
+    "author": "Abdul Rahim",
+    "city": "Bangalore",
+    "rating": 5,
+    "tag": "",
+    "product_purchased": "Celeste King Hydraulic Storage Bed",
+    "review_text": "This is a one stop shop for all furniture. I liked the BTM layout branch, the way they handled my query and understanding my need. I would like to appreciate Mr Sharief who helped me to pick the right sofa and bed coat as per my budget.",
+    "image_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80",
+    "display_order": 4,
+    "is_active": 1,
+    "created_at": "2026-08-27 16:48:16",
+    "updated_at": "2026-08-27 17:35:33"
+  },
+  {
+    "id": 5,
+    "author": "Pooja Hegde",
+    "city": "Mumbai",
+    "rating": 5,
+    "tag": "",
+    "product_purchased": "Milan Solid Teak Wood 3-Seater Sofa",
+    "review_text": "Absolutely stunning woodwork and supreme comfort! Delivery was right on time with flawless white-glove assembly.",
+    "image_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+    "display_order": 5,
+    "is_active": 1,
+    "created_at": "2026-08-27 16:53:44",
+    "updated_at": "2026-08-27 17:35:12"
+  }
+]

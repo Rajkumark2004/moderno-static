@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Moderno Flagship Experience Center",
+    "city": "Hyderabad",
+    "address": "Road No. 36, Jubilee Hills, Near Peddamma Temple Metro Station",
+    "landmark": "Jubilee Hills Main Hub",
+    "phone": "+91 99901 23999",
+    "timing": "10:30 AM - 9:00 PM (Open 7 Days)",
+    "map_url": null,
+    "image_url": null,
+    "is_active": 1,
+    "created_at": "2026-08-17 11:06:54"
+  },
+  {
+    "id": 2,
+    "name": "Moderno Luxury Living Studio",
+    "city": "Bengaluru",
+    "address": "100 Feet Road, Indiranagar, Near XII Main Junction",
+    "landmark": "Indiranagar Prime Sector",
+    "phone": "+91 98802 34888",
+    "timing": "10:30 AM - 9:00 PM (Open 7 Days)",
+    "map_url": null,
+    "image_url": null,
+    "is_active": 1,
+    "created_at": "2026-08-18 14:52:09"
+  },
+  {
+    "id": 3,
+    "name": "Moderno Bespoke Gallery",
+    "city": "New Delhi",
+    "address": "South Extension II, Main Ring Road, Block M",
+    "landmark": "South Ex Plaza",
+    "phone": "+91 98110 55777",
+    "timing": "10:30 AM - 9:00 PM (Open 7 Days)",
+    "map_url": null,
+    "image_url": null,
+    "is_active": 1,
+    "created_at": "2026-08-18 14:52:09"
+  }
+]

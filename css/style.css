@@ -1,0 +1,785 @@
+/* ==========================================================================
+   MODERNO - CORE DESIGN SYSTEM & STYLESHEET
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Brand Color Scheme - MODERNO Deep Royal Blue & Accent Red */
+    --primary: #0B5394;
+    --primary-dark: #083E70;
+    --primary-light: #186BB8;
+    --primary-subtle: #EFF6FC;
+    --accent-red: #C8102E;
+    --accent: #E0F2FE;
+    --accent-dark: #BAE6FD;
+    --gold: #d97706;
+    --gold-light: #fef3c7;
+    
+    /* Neutral & Background Colors */
+    --background: #ffffff;
+    --bg-utility: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-dark: #0f172a;
+    --text-main: #0f172a;
+    --text-body: #334155;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --text-on-primary: #ffffff;
+    --border-color: #e2e8f0;
+    --border-subtle: #f1f5f9;
+
+    /* Shadows & Radii */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Typography */
+    --font-heading: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+
+    /* Layout Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --container-max: 1280px;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-body);
+    background-color: var(--background);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Layout Utilities */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.section-padding {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+
+.section-padding-sm {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-main);
+    letter-spacing: -0.015em;
+}
+
+h1 { font-size: 2.25rem; font-weight: 650; letter-spacing: -0.025em; line-height: 1.2; }
+h2 { font-size: 1.85rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
+h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; }
+h4 { font-size: 1.05rem; font-weight: 600; }
+h5 { font-size: 0.95rem; font-weight: 600; }
+h6 { font-size: 0.85rem; font-weight: 600; }
+
+.section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-header .section-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    font-family: var(--font-heading);
+    font-size: 0.725rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--primary, #0B5394);
+    background-color: var(--primary-subtle, #f0f7ff);
+    padding: 0.35rem 0.95rem;
+    border-radius: var(--radius-full, 9999px);
+    margin-bottom: 0.65rem;
+    border: 1px solid rgba(11, 83, 148, 0.08);
+    box-shadow: 0 1px 3px rgba(11, 83, 148, 0.04);
+}
+
+.section-header .section-tag i {
+    font-size: 0.8rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header .section-title,
+.category-section-header .category-main-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    position: relative;
+}
+
+.section-header .section-title::after,
+.category-section-header .category-main-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary, #0B5394);
+    border-radius: 2px;
+    margin: 0.65rem auto 0 auto;
+}
+
+.section-header[style*="text-align:left"] .section-title::after,
+.section-header.text-left .section-title::after {
+    margin: 0.65rem 0 0 0;
+}
+
+.section-header .section-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #64748b;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75rem;
+    line-height: 1.65;
+}
+
+/* Button System */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    padding: 0.7rem 1.45rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+    text-align: center;
+    white-space: nowrap;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-on-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(11, 83, 148, 0.25);
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: var(--primary-subtle);
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: var(--text-on-primary);
+}
+
+.btn-outline-white {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.btn-outline-white:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--primary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark {
+    background-color: var(--text-main);
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #000000;
+}
+
+.btn-sm {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8125rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+    padding: 0.95rem 2rem;
+    font-size: 1.0625rem;
+    border-radius: var(--radius-md);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: var(--font-heading);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+}
+
+.badge-sale {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+.badge-gold {
+    background-color: var(--gold-light);
+    color: var(--gold);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.badge-new {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.badge-bestseller {
+    background: linear-gradient(135deg, #ae0a0e, #d97706);
+    color: #ffffff;
+}
+
+/* Rating Stars */
+.rating-stars {
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 4px;
+    color: #000000;
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.rating-count {
+    color: #4b6b94;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: 0.75rem;
+}
+
+/* Flex & Grid Helpers */
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c7c5c2;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* Custom SweetAlert2 Moderno Theme Overrides - Compact & Modern */
+.swal2-popup,
+.moderno-swal-popup {
+    width: 360px !important;
+    max-width: 90vw !important;
+    border-radius: 14px !important;
+    padding: 1.25rem 1.25rem 1rem !important;
+    box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.2) !important;
+    font-family: var(--font-body) !important;
+    border: 1px solid #e2e8f0 !important;
+    background: #ffffff !important;
+}
+
+.swal2-icon {
+    width: 48px !important;
+    height: 48px !important;
+    margin: 0.25rem auto 0.4rem !important;
+    border-width: 2.5px !important;
+}
+.swal2-icon .swal2-icon-content {
+    font-size: 1.75rem !important;
+}
+
+.swal2-title,
+.moderno-swal-title {
+    font-family: var(--font-heading) !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    color: #0f172a !important;
+    padding: 0.25rem 0 0 !important;
+    margin: 0 0 0.35rem 0 !important;
+    letter-spacing: -0.015em !important;
+}
+
+.swal2-html-container {
+    font-size: 0.85rem !important;
+    color: #64748b !important;
+    line-height: 1.5 !important;
+    margin: 0 0 0.85rem 0 !important;
+    padding: 0 !important;
+}
+
+.swal2-actions {
+    margin: 0.6rem auto 0 !important;
+    gap: 0.5rem !important;
+}
+
+.swal2-styled.swal2-confirm,
+.moderno-swal-confirm-btn {
+    border-radius: 7px !important;
+    padding: 0.45rem 1.15rem !important;
+    font-size: 0.825rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.15s ease !important;
+    margin: 0 !important;
+}
+
+.swal2-styled.swal2-cancel,
+.moderno-swal-cancel-btn {
+    border-radius: 7px !important;
+    padding: 0.45rem 1.15rem !important;
+    font-size: 0.825rem !important;
+    font-weight: 500 !important;
+    background: #64748b !important;
+    color: #ffffff !important;
+    transition: all 0.15s ease !important;
+    margin: 0 !important;
+}
+
+/* ── Dynamic Coupon Trigger Box Styles ── */
+.apply-coupon-trigger-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.85rem 1rem;
+    border: 1.5px dashed #bfdbfe;
+    border-radius: 8px;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 1.15rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+.apply-coupon-trigger-box:hover {
+    border-color: var(--primary);
+    background: var(--primary-subtle);
+}
+.coupon-icon-badge {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--primary-subtle);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    border: 1px solid #bfdbfe;
+    transition: all 0.2s ease;
+}
+.apply-coupon-trigger-box:hover .coupon-icon-badge {
+    background: #dbeafe;
+    border-color: #93c5fd;
+}
+.apply-coupon-trigger-box span {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--primary);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+.apply-coupon-trigger-box:hover span {
+    color: var(--primary-dark);
+}
+
+/* ── Applied Coupon Card Styles ── */
+.applied-coupon-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #f0fdf4;
+    border: 1.5px dashed #86efac;
+    border-radius: 8px;
+    padding: 0.65rem 0.85rem;
+    box-sizing: border-box;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.applied-coupon-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+}
+
+.applied-coupon-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    border: 1px solid #bbf7d0;
+}
+
+.applied-coupon-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.applied-coupon-code {
+    color: #15803d;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.applied-coupon-subtext {
+    color: #16a34a;
+    font-size: 0.72rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.applied-coupon-remove-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #dc2626;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+    line-height: 1;
+}
+
+.applied-coupon-remove-btn:hover {
+    background: #fecaca;
+    border-color: #f87171;
+    color: #b91c1c;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(220, 38, 38, 0.15);
+}
+
+.applied-coupon-remove-btn:active {
+    transform: translateY(0);
+}
+
+/* ── Coupon Modal Popup Styles ── */
+.coupon-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 999999 !important;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+.coupon-modal-overlay.active {
+    display: flex;
+}
+.coupon-modal-box {
+    background: #ffffff;
+    border-radius: 16px;
+    max-width: 440px;
+    width: 100%;
+    padding: 1.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: left;
+}
+.coupon-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.35rem;
+    cursor: pointer;
+    color: #64748b;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.coupon-modal-close:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+.coupon-modal-header {
+    margin-top: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.coupon-input-group {
+    display: flex;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+.coupon-input-group input {
+    flex: 1;
+    border: none;
+    padding: 0.75rem 1rem;
+    outline: none;
+    font-size: 0.9rem;
+    color: #334155;
+    background: transparent;
+    width: 100%;
+}
+.coupon-input-group button {
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 0 1.5rem;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.coupon-input-group button:hover {
+    background: var(--primary-dark);
+}
+.coupon-modal-body {
+    overflow-y: auto;
+    flex: 1;
+    margin-top: 0.5rem;
+    padding-right: 4px;
+    text-align: left;
+}
+.coupon-modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+.coupon-modal-body::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+}
+.available-coupons-title {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.4rem;
+}
+.coupon-card {
+    border-bottom: 1px dashed #e2e8f0;
+    padding: 1.25rem 0;
+    text-align: left;
+}
+.coupon-card:last-child {
+    border-bottom: none;
+}
+.coupon-code-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fffbeb;
+    border: 1px dashed #fde68a;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.6rem;
+}
+.coupon-card-title {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.35rem;
+    text-align: left;
+    letter-spacing: -0.01em;
+}
+.coupon-card-desc {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+.coupon-card-apply-btn {
+    background: #ffffff;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 0.4rem 1rem;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+.coupon-card-apply-btn:hover {
+    background: var(--primary);
+    color: #ffffff;
+}
