@@ -3136,9 +3136,15 @@ function executeFinalCheckoutSubmission(finalPayload) {
                 }
 
                 if (typeof renderEnquirySuccessUI === 'function') {
-                    renderEnquirySuccessUI(demoData);
+                    
+        localStorage.setItem('last_order', JSON.stringify(demoData));
+        window.location.href = 'order-success.html';
+        
                 } else if (typeof window.renderEnquirySuccessUI === 'function') {
-                    window.renderEnquirySuccessUI(demoData);
+                    window.
+        localStorage.setItem('last_order', JSON.stringify(demoData));
+        window.location.href = 'order-success.html';
+        
                 }
             }, 500);
         } else if (window.cartManager) {

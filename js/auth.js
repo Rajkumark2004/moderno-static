@@ -130,7 +130,7 @@ function updateAccountPageUI(user) {
 window.handleAccountButtonClick = function(event) {
     if (event) event.preventDefault();
     if (currentUserState) {
-        window.location.href = 'account.php';
+        window.location.href = 'account.html';
     } else {
         openLoginModal();
     }
@@ -149,7 +149,7 @@ window.handleWishlistButtonClick = function(event) {
         if (typeof cartManager !== 'undefined' && typeof cartManager.openWishlist === 'function') {
             cartManager.openWishlist();
         } else {
-            window.location.href = 'wishlist';
+            window.location.href = 'wishlist.html';
         }
     } else {
         if (typeof openLoginModal === 'function') {
@@ -251,7 +251,7 @@ window.handleUserRegistration = function(event) {
 
             setTimeout(() => {
                 closeModals();
-                window.location.href = 'account.php';
+                window.location.href = 'account.html';
             }, 1000);
         } else {
             showAuthAlert('danger', data.message || 'Registration failed.');
@@ -309,7 +309,7 @@ window.handleUserLoginSubmit = function(event) {
 
             setTimeout(() => {
                 closeModals();
-                window.location.href = 'account.php';
+                window.location.href = 'account.html';
             }, 800);
         } else {
             showAuthAlert('danger', data.message || 'Invalid credentials.');
@@ -342,7 +342,7 @@ window.handleUserLogout = function() {
                     window.cartManager.setUser(null);
                 }
                 if (window.location.pathname.includes('account') || window.location.pathname.includes('wishlist')) {
-                    window.location.href = 'index.php';
+                    window.location.href = 'index.html';
                 }
             })
             .catch(err => {
@@ -353,7 +353,7 @@ window.handleUserLogout = function() {
                     window.cartManager.setUser(null);
                 }
                 if (window.location.pathname.includes('account') || window.location.pathname.includes('wishlist')) {
-                    window.location.href = 'index.php';
+                    window.location.href = 'index.html';
                 }
             });
     };
@@ -521,7 +521,7 @@ window.handleUserOtpLoginSubmit = function(event) {
 
             setTimeout(() => {
                 closeModals();
-                window.location.href = 'account.php';
+                window.location.href = 'account.html';
             }, 800);
         } else {
             showAuthAlert('danger', data.message || 'Verification failed. Please try again.');

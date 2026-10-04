@@ -1463,7 +1463,10 @@ window.handleEnquirySubmit = function(e) {
                 }
             }
 
-            renderEnquirySuccessUI(demoData);
+            
+        localStorage.setItem('last_order', JSON.stringify(demoData));
+        window.location.href = 'order-success.html';
+        
         }, 500);
     }
 
